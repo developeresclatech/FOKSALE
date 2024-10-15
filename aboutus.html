@@ -1,36 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us </title>
-    <link rel="stylesheet" href="CSS/about.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <link rel="stylesheet" href="assets/CSS/about.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-  
-
-    <div class=" bg-cover bg-center h-96 w-full object-cover object-bottom" style=" background-image: url('image/imag_About.png');">
-        <!-- Add text centered inside the image -->
-        <div class="flex flex-col items-left justify-center h-full px-5">
-            <h1 class="text-white text-3xl font-bold about">ABOUT US</h1>
-            <h3 class="text-white text-lg about1 ">HOME / ABOUT US</h3>
-        </div>
+    <!-- https://www.figma.com/design/A6SI3GLJzSAluMcnq0ZYZr/FOK-Sales-Inner-Pages?node-id=0-1&t=lrtEHHddYD5k6FZn-1 -->
+  </head>
+  <body>
+    <div
+      class="bg-cover bg-bottom h-[60vh] w-full img_1"
+      style="background-image: url('assets/image/imag_About.png')"
+    >
+      <!-- Add text centered inside the image -->
+      <div class="flex flex-col items-left justify-center h-full px-5">
+        <h1 class="text-white text-3xl font-bold about">ABOUT US</h1>
+        <h3 class="text-white text-lg about1">
+          <span class="text-black">HOME </span> / ABOUT US
+        </h3>
+      </div>
     </div>
-    
 
     <div class="container mx-auto p-5">
-        <div class="grid grid-cols-2 gap-4">
-            <div>
-                <h1 class="text-black text-3xl font-bold ">About the company</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur magnam consequatur eveniet! Id quis atque rem in facilis nihil ullam quas ex dolorum exercitationem aperiam nemo harum temporibus at, velit perferendis aspernatur, quidem quaerat recusandae totam quia aut veniam. Perspiciatis neque harum dicta odio praesentium minus? Rerum rem quis harum!</p>
-            </div>
-            <div>01</div>
-           
+      <div class="grid grid-cols-12 gap-4">
+        <div class="col-span-9">
+          <div class="text-left mb-4">
+            <h1 class="text-black text-3xl font-bold">About the company</h1>
+            <p class="paragraph">
+              Fred O’Kasick Sales is a full service manufacturer’s
+              representative agency with over 100 years of combined brand
+              strategy and sales success, managing CPG companies and growing
+              them into multi-million dollar organizations. Founded in 1985, we
+              have been delivering optimal solutions that drive sales and
+              profits for our clients and retail partners within the personal
+              care, beauty, and private label categories.
+            </p>
           </div>
+
+          <div class="grid grid-cols-12 gap-4">
+            <div class="col-span-9">
+              <div class="mb-5">
+                <h1 class="text-black text-3xl font-bold">Company Profile</h1>
+                <p class="paragraph">
+                  We are nationally recognized for successfully positioning,
+                  launching, and managing thousands of SKUs into retail accounts
+                  over the past 30 years. We currently serve most of the USA
+                  with a strong, omni-channel and multi-disciplinary focus on
+                  the health, beauty, gift, salon and private label categories.
+                </p>
+              </div>
+              <div>
+                <p class="paragraph">
+                  While we have worked with companies with sales from zero to
+                  $100MM, our success is based on becoming your outsourced sales
+                  agency of record while we formulate strategies to master your
+                  gross profits.
+                </p>
+              </div>
+            </div>
+            <div class="col-span-3 p-5">
+              <img
+                class="img_3"
+                src="assets/image/img_3.jfif"
+                alt="Image Description"
+                class="max-h-96"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-span-3">
+          <img class="img_2" src="assets/image/img_2.png" alt="" srcset="" />
+        </div>
+      </div>
     </div>
 
-   
+    <div class="w-full h-[60vh] bg-cover bg-center" style="background-image: url('assets/image/img_4.png')" >
 
-</body>
+    </div>
+  </body>
 </html>
