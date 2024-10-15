@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>FOKSALE</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <svg width="307" height="75" viewBox="0 0 307 75" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <rect width="307" height="75" fill="url(#pattern0_20_522)"/>
+    <defs>
+    <pattern id="pattern0_20_522" patternContentUnits="objectBoundingBox" width="1" height="1">
+    <use xlink:href="#image0_20_522" transform="scale(0.00325733 0.0133333)"/>
+    </pattern>
+    <image id="image0_20_522" width="307" height="75" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATMAAABLCAYAAAAcXmBGAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QTJGREI3MTFGNTc5MTFFNUE0OEJCOTg2NDE0M0U1MTEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QTJGREI3MTJGNTc5MTFFNUE0OEJCOTg2NDE0M0U1MTEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpBMkZEQjcwRkY1NzkxMUU1QTQ4QkI5ODY0MTQzRTUxMSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpBMkZEQjcxMEY1NzkxMUU1QTQ4QkI5ODY0MTQzRTUxMSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Ps7tjbYAAC9cSURBVHja7F0HeBXF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"/>
+    </defs>
+    </svg>
+    
+  <div className="w-full flex items-end box-border py-20 px-4 sm:px-6 md:px-8 lg:px-[10rem] bg-[url('/hero-bg.png')] h-[calc(100vh_-_107px)]">
+    <div className="lg:w-[1240px] sm:w-full md:w-full max-w-screen-xl mx-auto flex flex-col gap-4">
+      <div className="flex flex-col items-center text-center sm:items-start sm:text-left">
+        <h3 className="hero-heading text-white text-xs sm:text-sm md:text-base lg:text-[1rem] font-medium sm:mt-20">
+          BUSINESS CONSULTING
+        </h3>
+        <h1 className="text-white font-normal text-3xl sm:text-4xl md:text-5xl lg:text-5xl leading-[2.5rem] sm:leading-[3rem] md:leading-[3.4rem] lg:leading-[3.4rem]">
+          WE BUILD{" "}
+          <span className="block font-bold mt-1">
+            <span className="char">B</span>
+            <span className="char">R</span>
+            <span className="char">A</span>
+            <span className="char">N</span>
+            <span className="char">D</span>
+            <span className="char">S</span>
+          </span>
+        </h1>
+        <p className="hero-text text-white mt-2 mb-3 text-base sm:text-sm md:text-base lg:text-lg w-full sm:w-10/12 md:w-8/12 lg:w-6/12">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text
+          ever since the 1500s, when an unknown printer took a galley of type
+          and scrambled it to make a type specimen book. It has survived not
+          only five centuries.
+        </p>
+      </div>
+  
+      <div className="flex flex-col items-center gap-10 sm:flex-row sm:items-center">
+        <button className="bg-[#063E79] transition duration-200 hover:bg-[#162f4d] text-white py-3 px-5 flex items-center gap-2 border border-[#0077B6] ">
+          <svg
+            width="20"
+            height="35"
+            viewBox="0 0 17 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8.60986 0.25C12.8911 0.25 16.3599 3.71875 16.3599 8C16.3599 12.2812 12.8911 15.75 8.60986 15.75C4.32861 15.75 0.859863 12.2812 0.859863 8C0.859863 3.71875 4.32861 0.25 8.60986 0.25ZM12.1692 7.46875L7.93486 3.23438C7.64111 2.94062 7.16611 2.94062 6.87549 3.23438L6.34424 3.76562C6.05049 4.05938 6.05049 4.53437 6.34424 4.825L9.51924 8L6.34424 11.175C6.05049 11.4688 6.05049 11.9438 6.34424 12.2344L6.87549 12.7656C7.16924 13.0594 7.64424 13.0594 7.93486 12.7656L12.1692 8.53125C12.463 8.2375 12.463 7.7625 12.1692 7.46875Z"
+              fill="white"
+            />
+          </svg>
+          DISCOVER MORE
+        </button>
+  
+        <div className="line w-0 bg-white h-[1px] sm:w-48"></div>
+  
+        <div className="flex gap-3 items-center justify-center">
+          <div className="social-icon w-16 h-16 border transition hover:scale-105 border-[#0077B6] rounded-full flex items-center justify-center">
+            <svg
+              width="25"
+              height="25"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15.4556 8C15.4556 3.98633 12.2036 0.734375 8.18994 0.734375C4.17627 0.734375 0.924316 3.98633 0.924316 8C0.924316 11.6264 3.58125 14.6322 7.05469 15.1777V10.1003H5.20898V8H7.05469V6.39922C7.05469 4.57842 8.13867 3.57266 9.79893 3.57266C10.594 3.57266 11.4255 3.71445 11.4255 3.71445V5.50156H10.5091C9.60674 5.50156 9.3252 6.06172 9.3252 6.63623V8H11.3402L11.018 10.1003H9.3252V15.1777C12.7986 14.6322 15.4556 11.6264 15.4556 8Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+          <div className="social-icon w-16 h-16 border transition hover:scale-105 border-[#0077B6] rounded-full flex items-center justify-center">
+            <svg
+              width="25"
+              height="25"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M14.148 4.94484C14.1576 5.07809 14.1576 5.21136 14.1576 5.3446C14.1576 9.40866 11.0643 14.0914 5.41075 14.0914C3.66899 14.0914 2.05099 13.587 0.689941 12.7114C0.937412 12.7399 1.17533 12.7494 1.43232 12.7494C2.86948 12.7494 4.19247 12.264 5.24895 11.436C3.89742 11.4074 2.7648 10.5223 2.37457 9.30398C2.56494 9.33252 2.75528 9.35156 2.95518 9.35156C3.23118 9.35156 3.50722 9.31348 3.76418 9.24688C2.35556 8.96133 1.29905 7.72403 1.29905 6.22975V6.19169C1.7083 6.42012 2.18423 6.56288 2.68863 6.58189C1.86059 6.02985 1.3181 5.08761 1.3181 4.02161C1.3181 3.45056 1.47035 2.92708 1.73687 2.47022C3.2502 4.3357 5.52495 5.55396 8.07568 5.68723C8.02811 5.4588 7.99954 5.22088 7.99954 4.98293C7.99954 3.28875 9.37011 1.90869 11.0738 1.90869C11.9589 1.90869 12.7584 2.27988 13.32 2.8795C14.0147 2.74626 14.681 2.48927 15.2711 2.13712C15.0427 2.85097 14.5573 3.45059 13.9196 3.83127C14.5383 3.76468 15.1379 3.59332 15.6899 3.3554C15.2712 3.96451 14.7477 4.507 14.148 4.94484Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+          <div className="social-icon w-16 h-16 border transition hover:scale-105 border-[#0077B6] rounded-full flex items-center justify-center">
+            <svg
+              width="25"
+              height="25"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8.19263 4.63086C6.32935 4.63086 4.82642 6.13379 4.82642 7.99707C4.82642 9.86035 6.32935 11.3633 8.19263 11.3633C10.0559 11.3633 11.5588 9.86035 11.5588 7.99707C11.5588 6.13379 10.0559 4.63086 8.19263 4.63086ZM8.19263 10.1855C6.98853 10.1855 6.00415 9.2041 6.00415 7.99707C6.00415 6.79004 6.9856 5.80859 8.19263 5.80859C9.39966 5.80859 10.3811 6.79004 10.3811 7.99707C10.3811 9.2041 9.39673 10.1855 8.19263 10.1855ZM12.4817 4.49316C12.4817 4.92969 12.1301 5.27832 11.6965 5.27832C11.26 5.27832 10.9114 4.92676 10.9114 4.49316C10.9114 4.05957 11.2629 3.70801 11.6965 3.70801C12.1301 3.70801 12.4817 4.05957 12.4817 4.49316ZM14.7112 5.29004C14.6614 4.23828 14.4211 3.30664 13.6506 2.53906C12.8831 1.77148 11.9514 1.53125 10.8997 1.47852C9.81567 1.41699 6.56665 1.41699 5.48267 1.47852C4.43384 1.52832 3.5022 1.76855 2.73169 2.53613C1.96118 3.30371 1.72388 4.23535 1.67114 5.28711C1.60962 6.37109 1.60962 9.62012 1.67114 10.7041C1.72095 11.7559 1.96118 12.6875 2.73169 13.4551C3.5022 14.2227 4.43091 14.4629 5.48267 14.5156C6.56665 14.5771 9.81567 14.5771 10.8997 14.5156C11.9514 14.4658 12.8831 14.2256 13.6506 13.4551C14.4182 12.6875 14.6584 11.7559 14.7112 10.7041C14.7727 9.62012 14.7727 6.37402 14.7112 5.29004ZM13.3108 11.8672C13.0823 12.4414 12.6399 12.8838 12.0627 13.1152C11.1985 13.458 9.14771 13.3789 8.19263 13.3789C7.23755 13.3789 5.18384 13.4551 4.32251 13.1152C3.74829 12.8867 3.30591 12.4443 3.07446 11.8672C2.73169 11.0029 2.81079 8.95215 2.81079 7.99707C2.81079 7.04199 2.73462 4.98828 3.07446 4.12695C3.30298 3.55273 3.74536 3.11035 4.32251 2.87891C5.18677 2.53613 7.23755 2.61523 8.19263 2.61523C9.14771 2.61523 11.2014 2.53906 12.0627 2.87891C12.637 3.10742 13.0793 3.5498 13.3108 4.12695C13.6536 4.99121 13.5745 7.04199 13.5745 7.99707C13.5745 8.95215 13.6536 11.0059 13.3108 11.8672Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div className="w-full lg:w-[1240px] lg:mx-auto my-[3.5rem]">
+          <div className="flex flex-wrap justify-center gap-6">
+            <div className="card bg-blue-800 text-white p-6 flex-1 min-w-[250px]  max-w-[23%] sm:m-w-[45%] md:max-w-[30%] lg:flex-grow">
+              <div className="mb-4">
+                <svg
+                  width="62"
+                  height="68"
+                  viewBox="0 0 62 68"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M56.9271 36.9641V19.2454C56.9271 18.2066 56.0931 17.3726 55.0543 17.3726H3.53689C2.49806 17.3726 1.66406 18.2066 1.66406 19.2454V64.9687C1.66406 66.0075 2.49806 66.8415 3.53689 66.8415H55.0543C56.0931 66.8415 56.9271 66.0075 56.9271 64.9687V47.2207"
+                    stroke="white"
+                    strokeWidth="1.46315"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                  />
+                  <path
+                    d="M7.92627 17.3726V66.8415"
+                    stroke="white"
+                    strokeWidth="1.46315"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                  />
+                  <path
+                    d="M43.6853 36.9495H56.7805C58.7411 36.9495 60.3359 38.5443 60.3359 40.5049V43.6653C60.3359 45.6259 58.7411 47.2207 56.7805 47.2207H43.6853C41.7247 47.2207 40.1299 45.6259 40.1299 43.6653V40.5049C40.1445 38.5443 41.7247 36.9495 43.6853 36.9495Z"
+                    stroke="white"
+                    strokeWidth="1.46315"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                  />
+                  <circle cx="45.0167" cy="43.8263" r="0.731573" fill="white" />
+                  <path
+                    d="M20.2607 17.3726L20.4509 16.7142L21.7678 12.1053L22.1189 10.9055L22.2214 10.5543L23.0407 7.71583L23.3919 6.51605L23.4358 6.35511L24.299 3.34102C24.3283 3.25324 24.3576 3.18008 24.3868 3.09229C24.8404 2.00956 26.0402 1.43893 27.1668 1.76083L52.5963 9.06193C52.6402 9.07656 52.6987 9.09119 52.7426 9.10582C53.8838 9.5155 54.513 10.7445 54.1765 11.9297L52.6109 17.3872"
+                    stroke="white"
+                    strokeWidth="1.46315"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                  />
+                  <path
+                    d="M47.6069 17.3725L48.1775 15.368L48.4994 14.2707C48.7042 13.5684 48.2946 12.8222 47.5922 12.6173L46.5534 12.3101L37.7892 9.79345L34.4459 8.83509L31.1026 7.87673L29.4931 7.40852C28.7908 7.20368 28.0446 7.61336 27.8398 8.31567L27.4008 9.83734C27.4008 9.83734 27.2137 10.4973 27.0936 10.9201C26.38 13.4303 25.25 17.3433 25.25 17.3433"
+                    stroke="white"
+                    strokeWidth="1.46315"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                  />
+                  <path
+                    d="M37.8037 9.69116C37.8037 9.73506 37.8037 9.76432 37.8037 9.80821"
+                    stroke="white"
+                    strokeWidth="1.46315"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                    strokeDasharray="0.12 0.12"
+                  />
+                  <path
+                    d="M9.41846 17.3727L10.1939 7.62814C10.2963 6.3552 11.4083 5.40416 12.6813 5.50658L14.3785 5.63826H14.4224H14.4517L23.4354 6.3552H23.5232"
+                    stroke="white"
+                    strokeWidth="1.46315"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                  />
+                  <path
+                    d="M13.7056 17.3725L14.0714 12.8953L14.203 11.2566C14.2616 10.525 14.9053 9.98365 15.6369 10.0422L22.2211 10.5689L22.3967 10.5835"
+                    stroke="white"
+                    strokeWidth="1.46315"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                  />
+                  <path
+                    d="M27.1081 10.9348L26.874 10.9202"
+                    stroke="white"
+                    strokeWidth="1.46315"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                    strokeDasharray="0.23 0.23"
+                  />
+                </svg>
+              </div>
+              <h3 className="font-bold text-xl mb-2">Cost-Effectiveness</h3>
+              <p>
+                We guarantee to provide affordable business consulting solutions
+                that help you reduce costs and improve your profits.
+              </p>
+            </div>
+            <div className="card bg-white border border-[#0077B6] text-gray-700 p-6 flex-1 min-w-[250px] max-w-[23%] sm:max-w-[45%] md:max-w-[30%] lg:flex-grow">
+              <div className="mb-4">
+                <svg
+                  width="69"
+                  height="68"
+                  viewBox="0 0 69 68"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.0112 16.3356C7.17663 16.5459 1.79909 22.2686 2.00938 29.1028C2.21968 35.8168 7.73241 41.134 14.4468 41.1039H55.0037C61.8534 41.1039 67.3961 35.5615 67.3961 28.7122C67.3961 21.863 61.8534 16.3206 55.0037 16.3206H53.8772"
+                    stroke="#0077B6"
+                    strokeWidth="1.50211"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                  />
+                  <path
+                    d="M18.1569 24.4165C12.8094 19.5049 12.4639 11.1837 17.3908 5.85152C22.3177 0.519345 30.6244 0.15886 35.9569 5.08549C36.6929 5.7614 37.3538 6.52743 37.9096 7.33853"
+                    stroke="#0077B6"
+                    strokeWidth="1.50211"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                  />
+                  <path
+                    d="M37.9097 7.32349C42.8816 4.31928 49.3407 5.89649 52.3449 10.8685C53.3513 12.5208 53.8771 14.3984 53.8771 16.3211"
+                    stroke="#0077B6"
+                    strokeWidth="1.50211"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                  />
+                  <path
+                    d="M23.0841 41.104V54.5779C23.0841 56.5156 21.5219 58.0778 19.5842 58.0778H10.917"
+                    stroke="#0077B6"
+                    strokeWidth="1.50211"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                  />
+                  <path
+                    d="M6.26054 62.7337C8.83227 62.7337 10.9171 60.6489 10.9171 58.0772C10.9171 55.5055 8.83227 53.4207 6.26054 53.4207C3.68881 53.4207 1.604 55.5055 1.604 58.0772C1.604 60.6489 3.68881 62.7337 6.26054 62.7337Z"
+                    stroke="#0077B6"
+                    strokeWidth="1.50211"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                  />
+                  <path
+                    d="M58.0831 58.0778H49.4159C47.4782 58.0778 45.916 56.5156 45.916 54.5779V41.104"
+                    stroke="#0077B6"
+                    strokeWidth="1.50211"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                  />
+                  <path
+                    d="M62.7395 62.7337C65.3113 62.7337 67.3961 60.6489 67.3961 58.0772C67.3961 55.5055 65.3113 53.4207 62.7395 53.4207C60.1678 53.4207 58.083 55.5055 58.083 58.0772C58.083 60.6489 60.1678 62.7337 62.7395 62.7337Z"
+                    stroke="#0077B6"
+                    strokeWidth="1.50211"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                  />
+                  <path
+                    d="M34.4998 67.2398C37.0715 67.2398 39.1563 65.155 39.1563 62.5833C39.1563 60.0116 37.0715 57.9268 34.4998 57.9268C31.9281 57.9268 29.8433 60.0116 29.8433 62.5833C29.8433 65.155 31.9281 67.2398 34.4998 67.2398Z"
+                    stroke="#0077B6"
+                    strokeWidth="1.50211"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                  />
+                  <path
+                    d="M34.5 57.9276V41.104"
+                    stroke="#0077B6"
+                    strokeWidth="1.50211"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </div>
+              <h3 className="font-bold text-xl mb-2">Innovative Technology</h3>
+              <p>
+                We stay up to date with the latest technology trends and offer
+                innovative solutions that help you stay ahead of the competition.
+              </p>
+            </div>
+  
+            <div className="card bg-white border border-[#0077B6] text-gray-700 p-6 flex-1 min-w-[250px] max-w-[23%] sm:max-w-[45%] md:max-w-[30%] lg:flex-grow">
+              {" "}
+              <div className="mb-4">
+                <svg
+                  width="67"
+                  height="67"
+                  viewBox="0 0 67 67"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M53.8206 65.4827H1.93523C1.75444 65.483 1.57624 65.4398 1.41565 65.3567C1.25505 65.2737 1.11677 65.1533 1.01244 65.0056C0.908117 64.858 0.840806 64.6874 0.816179 64.5083C0.791553 64.3292 0.810333 64.1468 0.870937 63.9765L12.2877 31.7733C12.3658 31.5522 12.5109 31.3609 12.7028 31.2262C12.8947 31.0915 13.1239 31.02 13.3584 31.0218L65.073 31.376C65.2529 31.3771 65.43 31.4213 65.5894 31.5048C65.7488 31.5882 65.8859 31.7086 65.9892 31.8559C66.0926 32.0032 66.1593 32.173 66.1837 32.3513C66.208 32.5296 66.1894 32.7111 66.1293 32.8807L54.8833 64.7296C54.8059 64.9497 54.6622 65.1404 54.4718 65.2753C54.2815 65.4102 54.0539 65.4827 53.8206 65.4827Z"
+                    stroke="#0077B6"
+                    strokeWidth="1.59564"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                  />
+                  <path
+                    d="M53.2747 31.2953V18.8206L35.619 0.797852H11.8918C11.019 0.797852 10.3105 1.55578 10.3105 2.48923V37.3507"
+                    stroke="#0077B6"
+                    strokeWidth="1.59564"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                  />
+                  <path
+                    d="M1.19971 63.0501V15.0485C1.19971 13.9204 2.03901 13.0061 3.07458 13.0061H10.3108"
+                    stroke="#0077B6"
+                    strokeWidth="1.59564"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                  />
+                  <path
+                    d="M53.2749 20.5276H57.0247C57.2915 20.5276 57.5556 20.5802 57.8021 20.6824C58.0486 20.7846 58.2724 20.9344 58.461 21.1232C58.6495 21.312 58.7989 21.5361 58.9007 21.7827C59.0025 22.0294 59.0547 22.2936 59.0543 22.5604V31.3364"
+                    stroke="#0077B6"
+                    strokeWidth="1.59564"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                  />
+                  <path
+                    d="M35.6191 0.797852V17.6366C35.6191 18.0175 35.7704 18.3828 36.0398 18.6521C36.3091 18.9214 36.6743 19.0727 37.0552 19.0727H53.2749"
+                    stroke="#0077B6"
+                    strokeWidth="1.59564"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                  />
+                  <path
+                    d="M17.8037 25.4292H44.9439"
+                    stroke="#0077B6"
+                    strokeWidth="1.59564"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                  />
+                  <path
+                    d="M17.8037 17.6443H29.6258"
+                    stroke="#0077B6"
+                    strokeWidth="1.59564"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                  />
+                  <path
+                    d="M17.8037 9.85938H29.6258"
+                    stroke="#0077B6"
+                    strokeWidth="1.59564"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </div>
+              <h3 className="font-bold text-xl mb-2">Industry Expertise</h3>
+              <p>
+                We specialize in serving specific industries, such as healthcare,
+                finance, or manufacturing, and offer tailored solutions.
+              </p>
+            </div>
+  
+            <div className="card bg-white border border-[#0077B6] text-gray-700 p-6 flex-1 min-w-[250px] max-w-[23%]">
+              <div className="mb-4">
+                <svg
+                  width="67"
+                  height="67"
+                  viewBox="0 0 67 67"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M64.7357 0.751709H15.574C14.7419 0.751709 14.0674 1.42624 14.0674 2.25832V51.42C14.0674 52.2521 14.7419 52.9266 15.574 52.9266H64.7357C65.5677 52.9266 66.2423 52.2521 66.2423 51.42V2.25832C66.2423 1.42624 65.5677 0.751709 64.7357 0.751709Z"
+                    stroke="#0077B6"
+                    strokeWidth="1.5036"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                  />
+                  <path
+                    d="M27.0707 52.9266V64.6321C27.0707 65.0309 26.9123 65.4134 26.6303 65.6953C26.3483 65.9773 25.9659 66.1357 25.5671 66.1357H2.26434C1.86556 66.1357 1.48312 65.9773 1.20114 65.6953C0.919157 65.4134 0.760742 65.0309 0.760742 64.6321V41.3264C0.760742 40.9276 0.919157 40.5451 1.20114 40.2631C1.48312 39.9812 1.86556 39.8228 2.26434 39.8228H14.0676"
+                    stroke="#0077B6"
+                    strokeWidth="1.5036"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                  />
+                  <path
+                    d="M21.1343 45.8597L58.7242 8.26978"
+                    stroke="#0077B6"
+                    strokeWidth="1.5036"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                    strokeDasharray="53.16 53.16"
+                  />
+                  <path
+                    d="M28.0507 46.3107H21.2845C21.125 46.3107 20.9721 46.2474 20.8593 46.1346C20.7465 46.0218 20.6831 45.8688 20.6831 45.7093V38.9431"
+                    stroke="#0077B6"
+                    strokeWidth="1.5036"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                  />
+                  <path
+                    d="M52.0259 7.58423H58.7921C58.9516 7.58423 59.1046 7.64759 59.2174 7.76039C59.3301 7.87318 59.3935 8.02616 59.3935 8.18567V14.9519"
+                    stroke="#0077B6"
+                    strokeWidth="1.5036"
+                    strokeMiterlimit="10"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </div>
+              <h3 className="font-bold text-xl mb-2">Scalability</h3>
+              <p>
+                Our solutions are scalable and can grow with your business,
+                ensuring that you get the most value out of your investment.
+              </p>
+            </div>
+          </div>
+        </div>
+  
+        <div className="w-full bg-[url('/second.png')] bg-center h-[525px] mx-auto flex justify-end items-center gap-4 max-w-[1240px]">
+          <div className="bg-[#0077B699] bg-opacity-60 text-white p-4 w-full sm:p-6 md:p-8 lg:w-[550px] mr-4 ml-4 md:ml-6 md:mr-6 lg:ml-10 lg:mr-10">
+            <h3 className="text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] leading-6">
+              THE RESULTS WE HAVE ACHIEVED
+            </h3>
+            <h3 className="text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] mb-5">
+              TOGETHER!
+            </h3>
+  
+            <div className="mb-4">
+              <div className="flex justify-between items-center h-2.5 w-full sm:w-[88%] mb-4">
+                <span>Growth</span>
+                <span>88%</span>
+              </div>
+              <div className="bg-[#A7A6A6] rounded-full h-2.5">
+                <div className="bg-white h-2.5 w-[88%] rounded-full"></div>
+              </div>
+            </div>
+  
+            <div className="mb-6">
+              <div className="flex justify-between items-center h-2.5 w-full sm:w-[88%] mb-4">
+                <span>Revenue</span>
+                <span>88%</span>
+              </div>
+              <div className="bg-[#A7A6A6] rounded-full h-2.5">
+                <div className="bg-white h-2.5 w-[88%] rounded-full"></div>
+              </div>
+            </div>
+  
+            <div className="mb-6">
+              <div className="flex justify-between items-center h-2.5 w-full sm:w-[72%] mb-4">
+                <span>Popularity</span>
+                <span>72%</span>
+              </div>
+              <div className="bg-[#A7A6A6] rounded-full h-2.5">
+                <div className="bg-white h-2.5 w-[72%] rounded-full"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div className="w-full bg-[#FFFFFF] border-b border-[#363E47]">
+    <div className="w-full md:w-[1240px] mx-auto flex flex-col md:flex-row gap-5 items-center md:items-end justify-between px-4 sm:px-6 md:px-0">
+      
+      <div className="w-full md:w-8/12">
+        <h3 className="hero-heading text-black text-[1rem] mt-20 font-medium sm:text-[0.875rem]">
+          Welcome to FRED O,KASICK SALES
+        </h3>
+        <h1 className="text-black font-semibold text-3xl md:text-5xl mt-2 leading-[2rem] md:leading-[3.4rem]">
+          WE WORK WITH YOU TO <span class>MAKE YOUR VISION A REALITY</span>
+        </h1>
+        <div className="flex flex-col md:flex-row gap-6 mt-6">
+          <div className="w-full md:w-6/12">
+            <p className="hero-text leading-loose text-black mb-3">
+              Fred O’Kasick Sales is a full service manufacturer’s representative agency with over 100 years of combined brand strategy and sales success, managing CPG companies and growing them into multi-million dollar organizations. Founded in 1985, we have been delivering optimal solutions that drive sales and profits for our clients and retail partners within the personal care, beauty, and private label categories.
+            </p>
+  
+            <button className="bg-[#063E79] mt-4 transition duration-200 hover:bg-[#162f4d] text-white py-2 px-4 text-sm flex items-center gap-2 border border-[#0077B6]">
+              <svg
+                width="20"
+                height="35"
+                viewBox="0 0 17 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.60986 0.25C12.8911 0.25 16.3599 3.71875 16.3599 8C16.3599 12.2812 12.8911 15.75 8.60986 15.75C4.32861 15.75 0.859863 12.2812 0.859863 8C0.859863 3.71875 4.32861 0.25 8.60986 0.25ZM12.1692 7.46875L7.93486 3.23438C7.64111 2.94062 7.16611 2.94062 6.87549 3.23438L6.34424 3.76562C6.05049 4.05938 6.05049 4.53437 6.34424 4.825L9.51924 8L6.34424 11.175C6.05049 11.4688 6.05049 11.9438 6.34424 12.2344L6.87549 12.7656C7.16924 13.0594 7.64424 13.0594 7.93486 12.7656L12.1692 8.53125C12.463 8.2375 12.463 7.7625 12.1692 7.46875Z"
+                  fill="white"
+                />
+              </svg>
+              DISCOVER MORE
+            </button>
+  
+            <div className="flex flex-col md:flex-row items-center gap-4 mt-4 text-[#0077B6]">
+              <div className="text-3xl md:text-5xl font-bold">
+                <span className="italic">24+</span>
+              </div>
+  
+              <div className="text-[#000000]">
+                <p className="text-sm md:text-base font-normal">
+                  Years of experience in growing business
+                </p>
+              </div>
+            </div>
+          </div>
+  
+          <div className="w-full md:w-6/12 flex justify-center">
+            <img
+              src="/meeting.png"
+              className="h-full object-cover"
+              alt="Meeting Image"
+            />
+          </div>
+        </div>
+      </div>
+  
+      <div className="w-12/12 scale-x-[-1]">
+              <img src="/female-walk.png" alt="Female Walking" />
+            </div>
+          </div>
+        </div>
+  
+        <div className="bg-[#1F1F1F] flex flex-col justify-center items-center text-white py-12">
+          <div className="text-center mb-8">
+            <p className="hero-heading text-white uppercase tracking-wide mt-5">
+              Step to Success
+            </p>
+            <h2 className="text-3xl font-bold mt-4">
+              How we Help your Business Succeed
+            </h2>
+            <p className="text-gray-400 mt-4">
+              We bridge the gap between value-focused technology, risk, and
+              advisory services
+            </p>
+            <div className="mt-10 border-t-2 border-gray-700 w-[20rem] mx-auto"></div>
+          </div>
+          <div className="flex flex-col md:flex-row justify-center items-center gap-8 mt-20">
+            <div className="relative bg-[#1F1F1F] text-white transition duration-300 hover:scale-[1.02] p-8 rounded-lg shadow-lg text-center border border-gray-600 max-w-xs">
+              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full flex items-center justify-center border border-gray-600">
+                <span className="text-black text-base">01.</span>
+              </div>
+              <div className="mt-6">
+                <img
+                  src="analysis.png"
+                  alt="Analysis Icon"
+                  className="mx-auto mb-4 w-16 h-16"
+                />
+              </div>
+              <h3 className="text-xl font-semibold mt-10">Analysis</h3>
+              <p className="text-[#9ca3af] mt-4">
+                We take time and effort to accurately review everything about your
+                business and your industry.
+              </p>
+            </div>
+  
+            <div className="relative bg-[#1F1F1F] transition duration-300 hover:scale-[1.02] text-white p-8 rounded-lg shadow-lg text-center border border-gray-600 max-w-xs">
+              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full flex items-center justify-center border border-gray-600">
+                <span className="text-black text-base">02.</span>
+              </div>
+              <div className="mt-6">
+                <img
+                  src="strategy.png"
+                  alt="Strategy Icon"
+                  className="mx-auto mb-4 w-16 h-16"
+                />
+              </div>
+              <h3 className="text-xl font-semibold mt-10">Strategy</h3>
+              <p className="text-[#9ca3af] mt-4">
+                We create a custom strategy that includes tactics that have been
+                previously proven and battle tested with outstanding results.
+              </p>
+            </div>
+  
+            <div className="relative bg-[#1F1F1F] transition duration-300 hover:scale-[1.02] text-white p-8 rounded-lg shadow-lg text-center border border-gray-600 max-w-xs">
+              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full flex items-center justify-center border border-gray-600">
+                <span className="text-black text-base">03.</span>
+              </div>
+              <div className="mt-6">
+                <img
+                  src="execution.png"
+                  alt="Execution Icon"
+                  className="mx-auto mb-4 w-16 h-16"
+                />
+              </div>
+              <h3 className="text-xl font-semibold mt-10">Execution</h3>
+              <p className="text-[#9ca3af] mt-4">
+                We create a custom strategy that includes tactics that have been
+                previously proven and battle tested with outstanding results.
+              </p>
+            </div>
+          </div>
+          <button className="bg-[#063E79] mt-20 mb-10 transition duration-200  hover:bg-[#162f4d] text-white py-3 px-5 flex items-center gap-2 border border-[#0077B6] ">
+            <svg
+              width="20"
+              height="35"
+              viewBox="0 0 17 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8.60986 0.25C12.8911 0.25 16.3599 3.71875 16.3599 8C16.3599 12.2812 12.8911 15.75 8.60986 15.75C4.32861 15.75 0.859863 12.2812 0.859863 8C0.859863 3.71875 4.32861 0.25 8.60986 0.25ZM12.1692 7.46875L7.93486 3.23438C7.64111 2.94062 7.16611 2.94062 6.87549 3.23438L6.34424 3.76562C6.05049 4.05938 6.05049 4.53437 6.34424 4.825L9.51924 8L6.34424 11.175C6.05049 11.4688 6.05049 11.9438 6.34424 12.2344L6.87549 12.7656C7.16924 13.0594 7.64424 13.0594 7.93486 12.7656L12.1692 8.53125C12.463 8.2375 12.463 7.7625 12.1692 7.46875Z"
+                fill="white"
+              />
+            </svg>
+            DISCOVER MORE
+          </button>
+        </div>
+        <div className="w-full max-w-[1240px] mx-auto mt-10 px-4 py-8 flex flex-col">
+          <h3 className="hero-heading mb-8">INDUSTRIES</h3>
+  
+          <div className="flex items-center justify-between mb-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#0A1119]">
+              Industries We Help
+            </h2>
+  
+            <button className="hidden md:flex py-2 px-6 bg-[#063E79] transition duration-200 hover:bg-[#162f4d] items-center gap-2 text-white">
+              <svg
+                width="20"
+                height="35"
+                viewBox="0 0 17 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.60986 0.25C12.8911 0.25 16.3599 3.71875 16.3599 8C16.3599 12.2812 12.8911 15.75 8.60986 15.75C4.32861 15.75 0.859863 12.2812 0.859863 8C0.859863 3.71875 4.32861 0.25 8.60986 0.25ZM12.1692 7.46875L7.93486 3.23438C7.64111 2.94062 7.16611 2.94062 6.87549 3.23438L6.34424 3.76562C6.05049 4.05938 6.05049 4.53437 6.34424 4.825L9.51924 8L6.34424 11.175C6.05049 11.4688 6.05049 11.9438 6.34424 12.2344L6.87549 12.7656C7.16924 13.0594 7.64424 13.0594 7.93486 12.7656L12.1692 8.53125C12.463 8.2375 12.463 7.7625 12.1692 7.46875Z"
+                  fill="white"
+                />
+              </svg>
+              CONTACT NOW
+            </button>
+          </div>
+  
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8">
+            <div className="flex flex-col">
+              <div className="flex items-center gap-2 py-5 border-b">
+                <img src="/symbol.svg" alt="Advanced Manufacturing" />
+                <p>Advanced Manufacturing</p>
+              </div>
+              <div className="flex items-center gap-2 py-5 border-b">
+                <img
+                  src="/symbol.svg"
+                  alt="Aerospace, Defense & Government Services"
+                />
+                <p>Aerospace, Defense & Government Services</p>
+              </div>
+              <div className="flex items-center gap-2 py-5 border-b">
+                <img src="/symbol.svg" alt="Agribusiness" />
+                <p>Agribusiness</p>
+              </div>
+              <div className="flex items-center gap-2 py-5 border-b">
+                <img src="/symbol.svg" alt="Automotive & Mobility" />
+                <p>Automotive & Mobility</p>
+              </div>
+            </div>
+  
+            <div className="flex flex-col">
+              <div className="flex items-center gap-2 py-5 border-b">
+                <img src="/symbol.svg" alt="Energy & Natural Resources" />
+                <p>Energy & Natural Resources</p>
+              </div>
+              <div className="flex items-center gap-2 py-5 border-b">
+                <img src="/symbol.svg" alt="Financial Services" />
+                <p>Financial Services</p>
+              </div>
+              <div className="flex items-center gap-2 py-5 border-b">
+                <img src="/symbol.svg" alt="Forest Products, Paper & Packaging" />
+                <p>Forest Products, Paper & Packaging</p>
+              </div>
+              <div className="flex items-center gap-2 py-5 border-b">
+                <img src="/symbol.svg" alt="Healthcare & Life Sciences" />
+                <p>Healthcare & Life Sciences</p>
+              </div>
+            </div>
+  
+            <div className="flex flex-col">
+              <div className="flex items-center gap-2 py-5 border-b">
+                <img src="/symbol.svg" alt="Technology" />
+                <p>Technology</p>
+              </div>
+              <div className="flex items-center gap-2 py-5 border-b">
+                <img src="/symbol.svg" alt="Media & Entertainment" />
+                <p>Media & Entertainment</p>
+              </div>
+              <div className="flex items-center gap-2 py-5 border-b">
+                <img src="/symbol.svg" alt="Social & Public Sector" />
+                <p>Social & Public Sector</p>
+              </div>
+              <div className="flex items-center gap-2 py-5">
+                <img src="/symbol.svg" alt="Telecommunications" />
+                <p>Telecommunications</p>
+              </div>
+            </div>
+          </div>
+  
+          <div className="flex justify-center md:hidden mt-8">
+            <button className="py-2 px-6 bg-[#063E79] transition duration-200 hover:bg-[#162f4d] flex items-center gap-2 text-white">
+              <svg
+                width="20"
+                height="35"
+                viewBox="0 0 17 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.60986 0.25C12.8911 0.25 16.3599 3.71875 16.3599 8C16.3599 12.2812 12.8911 15.75 8.60986 15.75C4.32861 15.75 0.859863 12.2812 0.859863 8C0.859863 3.71875 4.32861 0.25 8.60986 0.25ZM12.1692 7.46875L7.93486 3.23438C7.64111 2.94062 7.16611 2.94062 6.87549 3.23438L6.34424 3.76562C6.05049 4.05938 6.05049 4.53437 6.34424 4.825L9.51924 8L6.34424 11.175C6.05049 11.4688 6.05049 11.9438 6.34424 12.2344L6.87549 12.7656C7.16924 13.0594 7.64424 13.0594 7.93486 12.7656L12.1692 8.53125C12.463 8.2375 12.463 7.7625 12.1692 7.46875Z"
+                  fill="white"
+                />
+              </svg>
+              CONTACT NOW
+            </button>
+          </div>
+        </div>
+  
+        <div className="mt-5 mb-[6rem]">
+          <div className="w-full max-w-[1240px] mx-auto mt-10 flex flex-col gap-4 py-8 px-4 md:px-8">
+            <div className="text-center mb-8">
+              <p className="hero-heading text-[#0A1119] uppercase tracking-wide mt-5">
+                BLOG
+              </p>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl text-[#0A1119] font-bold mt-4">
+                Featured News and Insights
+              </h2>
+              <p className="text-[#0A1119] mt-4">
+                Read and update the latest news from us. Donec eu magna quis felis tristique pretium in in odio.
+              </p>
+              <div className="mt-10 border-t-2 border-gray-700 w-3/4 sm:w-[20rem] mx-auto"></div>
+            </div>
+      
+            <div className="flex flex-col md:flex-row gap-6 mt-10">
+              <div className="bg-white transition duration-300 hover:scale-[1.02] shadow-md rounded-md overflow-hidden flex-1">
+                <div className="relative">
+                  <img
+                    src="/blog1.png"
+                    alt="Blog 1"
+                    width="400"
+                    height="200"
+                    className="w-full object-cover"
+                  />
+                  <div className="absolute glass-morph bottom-[60px] right-4 bg-white text-white font-bold text-sm bg-opacity-75 py-[1rem] px-4 rounded">
+                    08 Aug
+                  </div>
+                  <p className="text-gray-400 bg-[#121C27] py-3 text-xs mb-2">
+                    &nbsp;&nbsp;&nbsp;&nbsp;BY ADMIN _ MARKETING
+                  </p>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold mb-2">
+                    5 Impactful Elements That Promote IT And Business
+                  </h3>
+                  <div className="flex items-center gap-2 py-2 mb-6 border-b"></div>
+                  <p className="text-gray-500 mb-4">
+                    Quisque Consectetur Purus Ut Suscipit Faucibus. Sed At Ornare Ligula. Quisque Dignissim Justo Arcu, Ut...
+                  </p>
+                  <a href="#" className="text-[#0A1119] font-semibold hover:underline">
+                    Continue Reading →
+                  </a>
+                </div>
+              </div>
+      
+              <div className="bg-white shadow-md transition duration-300 hover:scale-[1.02] rounded-md overflow-hidden flex-1">
+                <div className="relative">
+                  <img
+                    src="/blog2.png"
+                    alt="Blog 2"
+                    width="400"
+                    height="200"
+                    className="w-full object-cover"
+                  />
+                  <div className="absolute bottom-[60px] glass-morph right-4 bg-white text-white font-bold text-sm bg-opacity-75 py-[1rem] px-4 rounded">
+                    08 Aug
+                  </div>
+                  <p className="text-gray-400 text-xs py-3 bg-[#121C27] mb-2">
+                    &nbsp;&nbsp;&nbsp;&nbsp;BY ADMIN _ STARTUP CONSULTING
+                  </p>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold mb-2">
+                    Revolutionizing The Future Of Financial Services
+                  </h3>
+                  <div className="flex items-center gap-2 py-2 mb-6 border-b"></div>
+                  <p className="text-gray-500 mb-4">
+                    Quisque Consectetur Purus Ut Suscipit Faucibus. Sed At Ornare Ligula. Quisque Dignissim Justo Arcu, Ut...
+                  </p>
+                  <a href="#" className="text-[#0A1119] font-semibold hover:underline">
+                    Continue Reading →
+                  </a>
+                </div>
+              </div>
+      
+              <div className="bg-white shadow-md transition duration-300 hover:scale-[1.02] rounded-md overflow-hidden flex-1">
+                <div className="relative">
+                  <img
+                    src="/blog3.png"
+                    alt="Blog 3"
+                    width="400"
+                    height="200"
+                    className="w-full object-cover"
+                  />
+                  <div className="absolute bottom-[60px] glass-morph right-4 bg-white text-white font-bold text-sm bg-opacity-75 py-[1rem] px-4 rounded">
+                    08 Aug
+                  </div>
+                  <p className="text-gray-400 bg-[#121C27] py-3 text-xs mb-2">
+                    &nbsp;&nbsp;&nbsp;&nbsp;BY ADMIN _ CORPORATE
+                  </p>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold mb-2">
+                    A Guide To Embracing Meaningful Change In Banking
+                  </h3>
+                  <div className="flex items-center gap-2 py-2 mb-6 border-b"></div>
+                  <p className="text-gray-500 mb-4">
+                    Quisque Consectetur Purus Ut Suscipit Faucibus. Sed At Ornare Ligula. Quisque Dignissim Justo Arcu, Ut...
+                  </p>
+                  <a href="#" className="text-[#0A1119] font-semibold hover:underline">
+                    Continue Reading →
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="parent-div flex flex-col md:flex-row gap-4">
+    <div className="w-full md:w-[1240px] mx-auto flex flex-col">
+      <div className="flex-1 bg-cover bg-center bg-[url('/lastbg.png')]">
+        <div className="h-[200px] sm:h-[290px] flex items-end">
+          <h3 className="text-3xl sm:text-4xl text-white pb-[20px] sm:pb-[40px] px-4 sm:px-[40px]">
+            You need the right direction <span className="sm:block">to</span>
+          </h3>
+        </div>
+      </div>
+  
+      <div className="contact-info flex flex-col">
+        <div className="w-full md:w-[1240px] relative mx-auto flex flex-col md:flex-row gap-8 p-6 sm:p-[3rem] md:p-[5rem] bg-[#121C27]">
+          <div className="w-full md:w-6/12">
+            <div className="flex flex-col md:flex-row justify-between">
+              <div className="space-y-4 mb-6 md:mb-0">
+                <h3 className="text-lg sm:text-xl font-semibold mt-5 text-white">
+                  Address Business
+                </h3>
+                <p className="text-[#C4C4C4] text-md leading-relaxed">
+                  Fred O'Kasick Sales, Inc.
+                  <br />
+                  473 Dunham Rd. #100
+                  <br />
+                  St. Charles, IL 60174
+                </p>
+              </div>
+              <div className="space-y-4">
+                <h3 className="text-lg sm:text-xl font-semibold mt-5 text-white">
+                  Contact With Us
+                </h3>
+                <p className="text-[#C4C4C4] text-md leading-relaxed">
+                  Send mail: mike@foksales.com
+                  <br />
+                  Call us: 630.529.4462
+                </p>
+              </div>
+            </div>
+  
+            <div className="my-4 border-t mt-6 md:mt-10 mx-auto w-full md:w-8/12 border-gray-600"></div>
+  
+            <div>
+              <h3 className="text-lg sm:text-xl font-semibold mt-6 sm:mt-10 md:ml-[110px] text-white mb-6 md:mb-10">
+                Your benefits when contacting us:
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div className="flex items-center mb-5 space-x-2 flex-grow">
+                  <div className="py-[2px] px-2 rounded-full border bg-[#353E47] border-[#353E47] text-white flex items-center justify-center">
+                    ✔
+                  </div>
+                  <p className="text-[#C4C4C4] text-sm">Orientation for Business</p>
+                </div>
+                <div className="flex items-center mb-5 space-x-2 flex-grow">
+                  <div className="py-[2px] px-2 rounded-full border bg-[#353E47] border-[#353E47] text-white flex items-center justify-center">
+                    ✔
+                  </div>
+                  <p className="text-[#C4C4C4] text-sm">
+                    Analyze the Problems You are Facing
+                  </p>
+                </div>
+                <div className="flex items-center mb-5 space-x-2 flex-grow">
+                  <div className="py-[2px] px-2 rounded-full border bg-[#353E47] border-[#353E47] text-white flex items-center justify-center">
+                    ✔
+                  </div>
+                  <p className="text-[#C4C4C4] text-sm">
+                    Strategic Analysis for Businesses
+                  </p>
+                </div>
+                <div className="flex items-center mb-5 space-x-2 flex-grow">
+                  <div className="py-[2px] px-2 rounded-full border bg-[#353E47] border-[#353E47] text-white flex items-center justify-center">
+                    ✔
+                  </div>
+                  <p className="text-[#C4C4C4] text-sm">
+                    24/7 Support <br />
+                    at Any Time
+                  </p>
+                </div>
+                <div className="flex items-center mb-5 space-x-2 flex-grow">
+                  <div className="py-[2px] px-2 rounded-full border bg-[#353E47] border-[#353E47] text-white flex items-center justify-center">
+                    ✔
+                  </div>
+                  <p className="text-[#C4C4C4] text-sm">Qualified Consultants</p>
+                </div>
+                <div className="flex items-center mb-5 space-x-2 flex-grow">
+                  <div className="py-[2px] px-2 rounded-full border bg-[#353E47] border-[#353E47] text-white flex items-center justify-center">
+                    ✔
+                  </div>
+                  <p className="text-[#C4C4C4] text-sm">
+                    Free Consultation Until Cooperation
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div className="flex-1 w-full md:w-5/12 md:absolute md:right-0 md:bottom-0 mt-8 md:mt-0">
+            <div className="bg-gray-100 px-[2rem] py-[6.2rem] sm:px-8 shadow-md max-w-full">
+              <h1 className="text-center uppercase text-black text-xl sm:text-2xl md:text-lg tracking-[.1em] font-extrabold mb-6 md:mb-8">
+                Schedule a Free Consultation
+              </h1>
+              
+              <div className="flex justify-center mb-4">
+                <div className="text-center">
+                  <div className="flex justify-between mb-4 text-sm md:text-normal">
+                    <span>Complete Following Steps</span>
+                  </div>
+                </div>
+              </div>
+        
+              <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+                <div>
+                  <input
+                    type="text"
+                    placeholder="*Full name..."
+                    className="w-full p-3 sm:p-4 border border-gray-300 rounded-full text-sm"
+                  />
+                </div>
+                <div>
+                  <input
+                    type="email"
+                    placeholder="*Email address..."
+                    className="w-full p-3 sm:p-4 border border-gray-300 rounded-full text-sm"
+                  />
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    placeholder="*Phone number..."
+                    className="w-full p-3 sm:p-4 border border-gray-300 rounded-full text-sm"
+                  />
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    placeholder="*Company / Organization..."
+                    {...register('company')}
+                    className="w-full p-3 sm:p-4 border border-gray-300 rounded-full text-sm"
+                  />
+                </div>
+                <button type="submit" className="bg-[#063E79] text-white p-3 sm:p-4 w-full rounded-full transition duration-200 hover:bg-[#162f4d] text-sm flex items-center justify-center">
+                  <svg
+                    width="20"
+                    height="35"
+                    viewBox="0 0 17 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.60986 0.25C12.8911 0.25 16.3599 3.71875 16.3599 8C16.3599 12.2812 12.8911 15.75 8.60986 15.75C4.32861 15.75 0.859863 12.2812 0.859863 8C0.859863 3.71875 4.32861 0.25 8.60986 0.25ZM12.1692 7.46875L7.93486 3.23438C7.64111 2.94062 7.16611 2.94062 6.87549 3.23438L6.34424 3.76562C6.05049 4.05938 6.05049 4.53437 6.34424 4.825L9.51924 8L6.34424 11.175C6.05049 11.4688 6.05049 11.9438 6.34424 12.2344L6.87549 12.7656C7.16924 13.0594 7.64424 13.0594 7.93486 12.7656L12.1692 8.53125C12.463 8.2375 12.463 7.7625 12.1692 7.46875Z"
+                      fill="white"
+                    />
+                  </svg>
+                  <span className="ml-2">SUBMIT</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>

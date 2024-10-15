@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-primary {
+  background-color: #063E79;
+}
+
+.text-primary {
+  color: #063E79;
+}
+
+.border-primary {
+  border-color: #063E79;
+}
+
+.privacy li::after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateX(15px);
+  width: 1px;
+  height: 13px;
+  background-color: white;
+}
+
+.privacy li:nth-child(3):after {
+  width: 0px;
+}
+.hero-heading {
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.hero-heading:before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background-color: #0077B6;
+  margin-right: 8px;
+}
+
+@keyframes line-grow {
+  from {
+    width: 0%
+  }
+  to {
+    width: 40%;
+  }
+}
+
+.line {
+  width: 40%;
+  animation: line-grow 2s ease;
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.social-icon:nth-child(1) {
+  animation-delay: 2200ms;
+}
+.social-icon:nth-child(2) {
+  animation-delay: 2500ms;
+}
+.social-icon:nth-child(3) {
+  animation-delay: 2700ms;
+}
+
+.social-icon {
+  transform: scale(1);
+  animation: grow 1s ease;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+.char {
+  opacity: 0;
+  animation: fade 0.3s forwards;
+}
+
+.char:nth-child(1) {
+  animation-delay: 150ms;
+}
+.char:nth-child(2) {
+  animation-delay: 300ms;
+}
+.char:nth-child(3) {
+  animation-delay: 450ms;
+}
+.char:nth-child(4) {
+  animation-delay: 600ms;
+}
+.char:nth-child(5) {
+  animation-delay: 750ms;
+}
+.char:nth-child(6) {
+  animation-delay: 900ms;
+}
+
+@keyframes fade-down {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-text {
+  opacity: 0;
+  animation: fade-down 0.8s forwards;
+}
+
+.card {
+  opacity: 0;
+  animation: fade 0.8s forwards;
+}
+
+.card:nth-child(1) {
+  animation-delay: 150ms;
+}
+.card:nth-child(2) {
+  animation-delay: 400ms;
+}
+.card:nth-child(3) {
+  animation-delay: 650ms;
+}
+.card:nth-child(4) {
+  animation-delay: 900ms;
+}
+
+.glass-morph {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
