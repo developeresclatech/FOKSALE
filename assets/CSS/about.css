@@ -1,51 +1,91 @@
 .about {
     position: absolute;
-    left: 10%; /* Adjust to control horizontal position */
-    top: 20%;  /* Adjust to control vertical position */
+    left: 18%; /* Default for larger screens */
+    top: 33%;  /* Default for larger screens */
 }
 
 .about1 {
     position: absolute;
-    left: 10%; /* Adjust to control horizontal position */
-    top: 24%;  /* Adjust to control vertical position */
+    left: 18%; /* Default for larger screens */
+    top: 48%;  /* Default for larger screens */
 }
 
-@media (min-width: 768px) {
-    /* Adjust positions for larger screens */
+.icon {
+    position: absolute;
+    left: 20%; 
+    top: 67%;  
+}
+
+/* For medium screens (e.g., tablets) */
+@media (max-width: 768px) {
     .about {
-        left: 15%;
-        top: 25%;
+        left: 15%; /* Adjust as needed */
+        top: 30%;  /* Adjust as needed */
     }
 
     .about1 {
-        left: 15%;
-        top: 30%;
+        left: 15%; /* Adjust as needed */
+        top: 48%;  /* Adjust as needed */
+    }
+
+    .icon {
+        left: 17%; /* Adjust as needed */
+        top: 60%;  /* Adjust as needed */
     }
 }
 
-@media (min-width: 1024px) {
-    /* Further adjustments for large screens */
+/* For small screens (e.g., mobile devices) */
+@media (max-width: 480px) {
     .about {
-        left: 25%;
-        top: 20%;
+        left: 10%; /* Adjust as needed */
+        top: 20%;  /* Adjust as needed */
     }
 
     .about1 {
-        left: 25%;
-        top: 25%;
+        left: 10%; /* Adjust as needed */
+        top: 35%;  /* Adjust as needed */
+    }
+
+    .icon {
+        left: 12%; /* Adjust as needed */
+        top: 50%;  /* Adjust as needed */
     }
 }
 
-.img_1{
+.image_opcity{
+    opacity: 0.8;
 }
 
-.img_2{
+ /* .img_2{
+
+    max-width: 100%; 
+    height: 489px;
+}  */
+
+
+.img_2 {
+    max-width: 100%; /* Ensures the image never exceeds the container width */
+    height: 551px;   
+} 
+
+/* For medium screens (e.g., tablets) */
+@media (max-width: 768px) {
+    .img_2 {
+        height: 300px;  /* Adjust height for medium devices */
+    }
+}
+
+/* For small screens (e.g., mobile devices) */
+@media (max-width: 480px) {
+    .img_2 {
+        height: 200px;  /* Adjust height for small devices */
+    }
 }
 
 
 .img_3{
-    max-width: 100%;
-    height: 252px;
+    /* max-width: 100%; */
+    /* height: 282px; */
     /* 256px */
 }
 .img_4{
@@ -61,19 +101,27 @@
 .ptag{
     font-family: Inter;
     font-size: 18px;
-    font-weight: 400;
-    line-height: 30px;
+    font-weight: 460;
+    line-height: 26px;
     text-align: justified;
-    color: #000000;
-    gap: 0px;
-    opacity: 0px;
-
-
-
 }
 
 
+.custom{
+    font-family: 'Inter', sans-serif; /* This applies the Inter font */
+    font-weight: 430; /* font-semibold */
+    font-size: 16px; /* text-[18px] */
+    line-height: 24.2px;
+}
 
+.over_tem_p{
+    font-weight: 430;
+}
+
+.over_tem_p1{
+    font-weight: 500;
+    color: black;
+}
 
 /* 
 .inter-<uniquifier> {

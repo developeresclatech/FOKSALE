@@ -7,37 +7,62 @@
     <link rel="stylesheet" href="assets/CSS/about.css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
     <!-- https://www.figma.com/design/A6SI3GLJzSAluMcnq0ZYZr/FOK-Sales-Inner-Pages?node-id=0-1&t=lrtEHHddYD5k6FZn-1 -->
   </head>
 
   <body>
     <div
-      class="bg-cover bg-bottom h-[60vh] w-full img_1"
+      class="relative bg-cover bg-bottom h-[60vh] w-full"
       style="background-image: url('assets/image/imag_About.png')"
     >
-      <!-- Add text centered inside the image -->
-      <div class="flex flex-col items-left justify-center h-full px-5">
-        <h1 class="text-white text-3xl font-bold about">ABOUT US</h1>
-        <h3 class="text-white text-lg about1">
+      <!-- Overlay to control opacity of the image -->
+      <div class="absolute inset-0 bg-black opacity-30"></div>
+
+      <!-- Content over the image (text remains unaffected by opacity) -->
+      <div class="relative flex flex-col items-center justify-end h-full px-5">
+        <h1
+          class="text-white font-inter font-semibold text-[56px] leading-[67.77px] about"
+        >
+          ABOUT US
+        </h1>
+        <h3
+          class="text-white font-inter font-normal text-[24px] leading-[29.05px] about1"
+        >
           <span class="text-black">HOME </span> / ABOUT US
         </h3>
+
+        <!-- Icon -->
+        <div class="mt-4">
+          <img
+            class="icon w-16 h-16"
+            src="assets/image/Frame87.png"
+            alt="Icon"
+          />
+        </div>
       </div>
     </div>
 
-    <div class="grid grid-cols-12 gap-4 mt-4 mb-5">
-      <div class="col-span-1"></div>
+    <!-- <div class="container mx-auto p-4"> -->
+    <div class="grid grid-cols-12 gap-4 mb-9 px-4 lg:px-16 mt-8">
+      <div class="col-span-1 hidden lg:block"></div>
 
-      <div class="col-span-10">
+      <div class="col-span-12 lg:col-span-10">
         <div class="grid grid-cols-12 gap-4">
           <!-- Left Section: About the Company -->
-          <div class="col-span-12 md:col-span-9">
+          <div class="col-span-12 lg:col-span-8">
             <div class="text-left mb-4">
-              <h1 class=" mt-6 font-inter text-[40px] font-semibold leading-[48.41px] text-left uppercase text-[#000000] ">About the company</h1>
-              <!-- <p class="text-base leading-6 text-black font-medium"> -->
-                <p class="ptag">
+              <h1
+                class="mt-8 mb-2 font-inter text-[28px] md:text-[40px] font-semibold leading-[48.41px] text-left uppercase text-[#000000]"
+              >
+                About the company
+              </h1>
+              <p class="ptag text-justify">
                 Fred O’Kasick Sales is a full-service manufacturer’s
                 representative agency with over 100 years of combined brand
                 strategy and sales success, managing CPG companies and growing
@@ -49,14 +74,16 @@
             </div>
 
             <!-- Nested Grid for Company Profile and Image -->
-            <div class="grid grid-cols-12 gap-4 py-6">
+            <div class="grid grid-cols-12 gap-4">
               <!-- Left Column: Company Profile Text -->
-              <div class="col-span-12 md:col-span-9 ">
+              <div class="col-span-12 md:col-span-9">
                 <div class="mb-5">
-                  <h2 class=" font-inter text-[40px] font-semibold leading-[48.41px] text-left uppercase text-[#000000] ">Company Profile</h2>
-                  <p
-                    class="ptag "
+                  <h2
+                    class="mt-3 mb-2 font-inter text-[28px] md:text-[40px] font-semibold leading-[48.41px] text-left uppercase text-[#000000]"
                   >
+                    Company Profile
+                  </h2>
+                  <p class="ptag text-justify">
                     We are nationally recognized for successfully positioning,
                     launching, and managing thousands of SKUs into retail
                     accounts over the past 30 years. We currently serve most of
@@ -65,42 +92,40 @@
                     categories.
                   </p>
                 </div>
-                <div>
-                  <p
-                    class="ptag"
-                  >
-                    While we have worked with companies with sales from
-                    <span class="font-bold">zero to $100MM </span>, our success
-                    is based on becoming your outsourced sales agency of record
-                    while we formulate strategies to master your gross profits.
-                  </p>
-                </div>
+                <p class="ptag text-justify">
+                  While we have worked with companies with sales from
+                  <span class="font-bold">zero to $100MM</span>, our success is
+                  based on becoming your outsourced sales agency of record while
+                  we formulate strategies to master your gross profits.
+                </p>
               </div>
 
               <!-- Right Column: Company Profile Image -->
-              <div class="col-span-12 md:col-span-3 p-5">
+              <div class="col-span-12 md:col-span-3">
                 <img
                   src="assets/image/img_3.jfif"
-                  alt="Image Description"
-                  class="relative h-60 w-full bg-left"
+                  alt="Company Profile Image"
+                  class="w-[236px] h-[320px] object-cover object-center mx-auto md:mx-0"
                 />
               </div>
             </div>
           </div>
 
-          <!-- Right Column: Another Image -->
-          <div class="col-span-12 md:col-span-3 p-5">
+          <!-- Right Section: Another Image -->
+          <div class="col-span-12 lg:col-span-4">
             <img
               src="assets/image/img_2.png"
               alt="Another Image"
-              class="w-full h-full"
+              class="img_2 w-full object-cover"
             />
           </div>
         </div>
       </div>
 
-      <div class="col-span-1"></div>
+      <div class="col-span-1 hidden lg:block"></div>
     </div>
+
+    <!-- </div> -->
 
     <!-- <div class="relative bg-cover bg-center h-[77vh] w-full" style="background-image: url('assets/image/img_4.png')">
   </div> -->
@@ -151,37 +176,42 @@
       </div>
     </div>
 
-    <div class="mb-5">
+    <!-- <div class="container mx-auto"> -->
+    <div class="mt-12 ml-10 mb-12">
       <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
         <!-- Row 1 -->
-         <div class="col-span-2"></div>
+        <div class="col-span-1"></div>
         <div class="col-span-10 md:col-span-8">
           <div class="text-left p-4 h-full">
-            <div class="flex items-center">
+            <div class="flex items-center mb-5">
               <div>
-                <img src="assets/image/Vector1.png" class="w-[10px] h-[10px]" alt="" />
+                <img
+                  src="assets/image/Vector1.png"
+                  class="w-[10px] h-[10px]"
+                  alt=""
+                />
               </div>
               <p
-                class="font-inter text-base font-medium leading-[16px] tracking-[3px] text-left ml-4"
+                class="font-inter text-base font-medium leading-[10px] tracking-[3px] text-left ml-4 uppercase"
               >
                 Welcome to Fred O, Kasick Sales
               </p>
             </div>
             <p
-              class="font-inter text-[56px] font-semibold leading-[67.77px] tracking-[0.01em] text-left text-[#040202]"
+              class="font-inter text-[52px] font-semibold leading-[63.77px] tracking-[0.01em] text-left text-[#040202] mb-2"
             >
               GLOBAL EXPERTISE: DECADES OF EXCELLENCE
             </p>
-            <p class="font-inter text-[20px] font-normal leading-[24.2px] text-left">
+            <p
+              class="font-inter text-[18px] leading-[24.2px] text-left over_tem_p1"
+            >
               Ready to Fuel Your Next Big Win!
             </p>
           </div>
         </div>
-       
       </div>
     </div>
-    
-    
+    <!-- </div> -->
 
     <!-- Image user  -->
 
@@ -206,7 +236,7 @@
         <div class="col-span-1 md:col-span-8">
           <!-- Content for the second column -->
           <p
-            class="font-inter text-[44px] font-semibold leading-[53.25px] tracking-[0.02em] text-left text-[#040202]"
+            class="font-inter text-[38px] font-semibold leading-[53.25px] tracking-[0.02em] text-left text-[#040202] uppercase"
           >
             Building a Legacy of Trust, Innovation, and Global Success
           </p>
@@ -217,183 +247,243 @@
 
     <!-- ///asdfasdfad -->
 
-    <div class="p-4">
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
-        <div class="hidden md:block col-span-3"></div>
-        <div class="col-span-1 md:col-span-7">
+    <!-- <div class="p-4"> -->
+    <div class="container mx-auto">
+      <div class="grid grid-cols-2 md:grid-cols-12">
+        <div class="hidden md:block col-span-3 mr-4"></div>
+        <div class="col-span-1 md:col-span-8">
           <div class="text-center md:text-left">
-            <p class="font-inter text-[20px]  leading-[24.2px] text-left text-[#000000]">
+            <p class="custom">
               Why your business needs professional business consulting
             </p>
+            <hr class="border-t border-gray-300 my-4" />
           </div>
           <!-- Divider Line -->
-          <hr class="border-t border-gray-300 my-4" />
         </div>
-        <div class="hidden md:block col-span-2"></div>
+        <!-- <div class="hidden md:block col-span-1"></div> -->
       </div>
     </div>
+    <!-- </div> -->
 
     <!-- ///<<<<<<<<<<<<<<<<<<< Section >>>>>>>>>> -->
 
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-4 pb-16 md:pb-32">
-      <!-- Empty space for larger screens -->
-      <div class="hidden md:block col-span-3"></div>
+    <div class="container mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-4 pb-16 md:pb-32 py-6">
+        <!-- Empty space for larger screens -->
+        <div class="hidden md:block col-span-3"></div>
 
-      <!-- Main content -->
-      <div class="col-span-1 md:col-span-7">
-        <!-- Section 1 -->
-        <div class="flex justify-between items-center mb-4">
-          <p
-            class="font-inter uppercase text-[35px] font-semibold leading-[42.36px] text-left  text-[#040202]"
-          >
-            Worldwide reach
-          </p>
-          <img
-            src="assets/image/teenyicons_up-outline.png"
-            alt="Arrow Icon"
-            class="w-8 h-8 md:w-10 md:h-10"
-          />
-        </div>
-
-        <div>
-          <p
-            class="font-sans font-normal text-[20px] leading-[24.2px] text-[background: #000000]"
-          >
-            Our agency is a major contributor to a network of brokers, master
-            brokers, distributors, and manufacturers to quickly and effectively
-            grow a client’s business while being cognizant of sales in existing
-            channels. We have worked with companies with sales from
-            <span class="font-sans text-[20px] font-medium leading-[24.2px] text-left">zero to $100MM</span>.
-          </p>
-        </div>
-
-        <div>
-          <p
-            class="font-sans font-normal text-[20px] leading-[24.2px] text-[#000000] mb-5"> 
-            Our success and focus have always been working with companies–large
-            and small and old and new–to leverage their brand equity into a
-            dominating force in retail markets.
-          </p>
-        </div>
-
-        <div>
-          <p
-            class="font-sans font-normal text-[20px] leading-[24.2px] text-[#000000] mb-5"
-          >
-            Key Accounts: Walgreens, ULTA, Jinny Beauty, Target, CVS, etc.
-          </p>
-        </div>
-        <hr class="border-t border-gray-300 my-4" />
-
-        <!-- Section 2 -->
-        <div class="flex justify-between items-center mb-4">
-          <p
-            class="font-inter uppercase text-[35px] font-semibold leading-[42.36px] text-left  text-[#040202]"
-          >
-            A Peak into Our Files
-          </p>
-          <img
-            src="assets/image/Vector.png"
-            alt="Arrow Icon"
-            class="w-7 h-6 md:w-9 md:h-7"
-          />
-        </div>
-        <hr class="border-t border-gray-300 my-4" />
-
-        <!-- Section 3 -->
-        <div class="flex justify-between items-center">
-          <p
-            class="font-inter uppercase text-[35px] font-semibold leading-[42.36px] text-left  text-[#040202]"
-          >
-            30 Years
-          </p>
-          <img
-            src="assets/image/Vector.png"
-            alt="Arrow Icon"
-            class="w-7 h-6 md:w-9 md:h-7"
-          />
-        </div>
-      </div>
-
-      <!-- Empty space for larger screens -->
-      <div class="hidden md:block col-span-2"></div>
-    </div>
-
-    <!-- /asdzx Last section  -->
-    <div class="grid grid-cols-12 gap-4">
-      <div class="col-span-4"></div>
-      <div class="col-span-6">
-        <div class="flex items-center">
-          <div>
+        <!-- Main content -->
+        <div class="col-span-1 md:col-span-8">
+          <!-- Section 1: Worldwide Reach -->
+          <div class="flex justify-between items-center mb-4">
+            <p
+              class="font-inter uppercase text-[35px] font-semibold leading-[42.36px] text-left text-[#040202]"
+            >
+              Worldwide Reach
+            </p>
             <img
-              src="assets/image/Vector1.png"
+              src="assets/image/teenyicons_up-outline.png"
               alt="Arrow Icon"
-              class="w-9 h-7"
+              class="w-8 h-8 md:w-10 md:h-10 cursor-pointer"
+              onclick="toggleAccordion(1)"
+              id="arrow-1"
             />
           </div>
+          <div id="content-1" class="hidden">
+            <div class="grid grid-cols-12 gap-4">
+              <div class="col-span-9">
+                <div class="mb-4">
+                  <p class="custom text-[#000000]">
+                    Our agency is a major contributor to a network of brokers,
+                    master brokers, distributors, and manufacturers to quickly
+                    and effectively grow a client’s business while being
+                    cognizant of sales in existing channels. We have worked with
+                    companies with sales from
+                    <span
+                      class="font-sans text-[20px] font-medium leading-[24.2px] text-left"
+                      >zero to $100MM</span
+                    >.
+                  </p>
+                </div>
+                <div>
+                  <p class="custom text-[#000000] mb-5">
+                    Our success and focus have always been working with
+                    companies–large and small, old and new–to leverage their
+                    brand equity into a dominating force in retail markets.
+                  </p>
+                </div>
+              </div>
+              <div class="col-span-2"></div>
+            </div>
+            <div>
+              <p class="custom text-[#000000] mb-5">
+                Key Accounts: Walgreens, ULTA, Jinny Beauty, Target, CVS, etc.
+              </p>
+            </div>
+            <hr class="border-t border-gray-300 my-4" />
+          </div>
 
-          <div>
+          <!-- Section 2: A Peek into Our Files -->
+          <div class="flex justify-between items-center mb-4">
             <p
-              class="ml-4 font-medium text-[25px] leading-[24.2px] uppercase text-black text-left"
+              class="font-inter uppercase text-[35px] font-semibold leading-[42.36px] text-left text-[#040202]"
             >
-              Our team
+              A Peek into Our Files
+            </p>
+            <img
+              src="assets/image/Vector.png"
+              alt="Arrow Icon"
+              class="w-7 h-6 md:w-9 md:h-7 cursor-pointer"
+              onclick="toggleAccordion(2)"
+              id="arrow-2"
+            />
+          </div>
+          <div id="content-2" class="hidden">
+            <p class="custom text-[#000000] mb-5">
+              We have deep knowledge across sectors and maintain extensive files
+              of case studies, reports, and internal analysis that showcase how
+              our agency has helped clients drive success across the globe.
+            </p>
+            <hr class="border-t border-gray-300 my-4" />
+          </div>
+
+          <!-- Section 3: 30 Years -->
+          <div class="flex justify-between items-center mb-4">
+            <p
+              class="font-inter uppercase text-[35px] font-semibold leading-[42.36px] text-left text-[#040202]"
+            >
+              30 Years
+            </p>
+            <img
+              src="assets/image/Vector.png"
+              alt="Arrow Icon"
+              class="w-7 h-6 md:w-9 md:h-7 cursor-pointer"
+              onclick="toggleAccordion(3)"
+              id="arrow-3"
+            />
+          </div>
+          <div id="content-3" class="hidden">
+            <p class="custom text-[#000000] mb-5">
+              With over 30 years of experience, our agency has helped countless
+              brands scale and expand into new markets while consistently
+              delivering impressive results.
             </p>
           </div>
         </div>
+
+        <!-- Empty space for larger screens -->
+        <div class="hidden md:block col-span-1"></div>
       </div>
-      <div class="col-span-2"></div>
     </div>
 
-    <div class="grid grid-cols-12 gap-4 mb-36">
-      <!-- Left Column with centered text -->
-      <div class="col-span-4 w-1/2 mx-auto text-center mt-3">
-        <p class="font-sans font-normal text-[20px] leading-[24.2px] text-justify">
-          Success is the result of collaboration and hard work.
-        </p>
-      </div>
 
-      <!-- Middle Column with inner grid -->
-      <div class="col-span-6">
-        <div class="grid grid-cols-12 gap-2">
-          <!-- Nested grid columns -->
-          <div class="col-span-8 pt-4">
-            <!-- Content for 8-column span -->
-            <div class="">
-              <p class="ptag pb-4">
-                As a tightly integrated team, we believe that our success
-                derives from the fact that our employees are an extremely
-                valuable asset. By being vertically integrated, we leverage our
-                collective ability to truly understand all the intricacies of
-                the retailers we work with to ensure we maximize our mutual
-                efforts to exceed our client’s expectations. We take care of the
-                people who take care of your business.
+
+    <!-- /asdzx Last section  -->
+    <div class="container mx-auto">
+      <div class="grid grid-cols-12 gap-4">
+        <div class="col-span-4"></div>
+        <div class="col-span-8">
+          <div class="flex items-center">
+            <div>
+              <img
+                src="assets/image/Vector1.png"
+                alt="Arrow Icon"
+                class="w-5 h-5"
+              />
+            </div>
+  
+            <div>
+              <p
+                class="over_tem_p ml-4 font-inter text-[32px] leading-[16px] tracking-[3px] text-left text-[#000000BF] uppercase"
+              >
+                Our team
               </p>
             </div>
           </div>
-          <div class="col-span-4">
-            <!-- Content for 4-column span -->
-          </div>
         </div>
-
-        <div class="flex justify-between items-center">
-          <div class="">
-            <p class="ptag">
-              Click <span class="text-blue-500">HERE</span> to discover the team
-              that makes our organization a success
+        <div class="col-span-1"></div>
+      </div>
+  
+      <div class="grid grid-cols-12  mb-36">
+        <!-- Left Column with centered text -->
+        <div class="col-span-4 w-1/2 mx-auto mt-3 pl-20 ">
+          <p class="custom leading-[24.05px] text-left">
+            "Success is the result of collaboration and hard work.
+          </p>
+        </div>
+  
+        <!-- Middle Column with inner grid -->
+        <div class="col-span-7">
+          <div class="mt-5 mb-5">
+            <p
+              class="font-inter text-[50px] font-medium leading-[56.77px] tracking-[0.02em] text-left uppercase text-[#040202]"
+            >
+              A good team can overcome any obstacle.
             </p>
           </div>
-          <div>
-            <img
-              src="assets/image/Link.png"
-              alt="Arrow Icon"
-              class="w-25 h-12"
-            />
+          <div class="grid grid-cols-12 ">
+            <!-- Nested grid columns -->
+            <div class="col-span-8 pt-4">
+              <!-- Content for 8-column span -->
+  
+              <div class="">
+                <p class="custom text-justify pb-4">
+                  As a tightly integrated team, we believe that our success
+                  derives from the fact that our employees are an extremely
+                  valuable asset. By being vertically integrated, we leverage our
+                  collective ability to truly understand all the intricacies of
+                  the retailers we work with to ensure we maximize our mutual
+                  efforts to exceed our client’s expectations. We take care of the
+                  people who take care of your business.
+                </p>
+              </div>
+            </div>
+            <div class="col-span-4">
+              <!-- Content for 4-column span -->
+            </div>
+          </div>
+  
+          <div class="grid grid-cols-12 gap-4">
+            <div class="col-span-9">
+              <p class="custom">
+                Click <span class="text-blue-500"><a href="">HERE</a></span> to
+                discover the team that makes our organization a success
+              </p>
+            </div>
+            <div class="col-span-3 text-left">
+              <div class="flex justify-end items-end">
+                <div>
+                  <img
+                    src="assets/image/Link.png"
+                    alt="Arrow Icon"
+                    class="w-25 h-12"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+        <!-- Right Column (empty) -->
+        <div class="col-span-1"></div>
       </div>
 
-      <!-- Right Column (empty) -->
-      <div class="col-span-2"></div>
     </div>
+
+    <script>
+      function toggleAccordion(section) {
+        const content = document.getElementById(`content-${section}`);
+        const arrow = document.getElementById(`arrow-${section}`);
+
+        if (content.classList.contains("hidden")) {
+          // Show the content
+          content.classList.remove("hidden");
+          arrow.classList.add("rotate-180"); // Rotate the arrow when active
+        } else {
+          // Hide the content
+          content.classList.add("hidden");
+          arrow.classList.remove("rotate-180"); // Reset the arrow rotation
+        }
+      }
+    </script>
   </body>
 </html>
