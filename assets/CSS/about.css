@@ -240,4 +240,12 @@
     transform: rotate(180deg);
     transition: transform 0.3s ease;
   }
-  
+
+  .img-middle {
+    max-width: 100%; 
+    height: 565px;
+} 
+
+.test_weight{
+    font-weight: 400px;
+}
