@@ -89,6 +89,21 @@
 }
 
 
+.transition-height {
+    transition: height 0.3s ease;
+    overflow: hidden;
+    height: 0;
+  }
+  
+  .transition-height-active {
+    height: auto;
+  }
+  
+  .rotate-180 {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+  }
+  
 .image_opcity{
     opacity: 0.8;
 }
@@ -106,4 +121,11 @@ text-align: left;
 .test_weight{
     font-weight: 460px;
    
+}
+
+.custom{
+    font-family: 'Inter', sans-serif; /* This applies the Inter font */
+    font-weight: 430; /* font-semibold */
+    font-size: 16px; /* text-[18px] */
+    line-height: 24.2px;
 }
