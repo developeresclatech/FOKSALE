@@ -101,9 +101,9 @@ body, html, * {
     padding: 0px;
 }
 .inner-2 {
-    width: 90%;
+    width: 85%;
     margin: auto;
-    padding: 40px 0px;
+    padding: 60px 0px;
     border-left: 1px solid white;
     border-right: 1px solid white;
 }
