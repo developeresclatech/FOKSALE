@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Why Chose Us </title>
+    <title>Why Chose Us</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -12,14 +12,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"/>
+      rel="stylesheet"
+    />
+
+    <style>
+      .centetdiv {
+        width: 80%;
+        margin: auto;
+        padding: 0px 0px;
+      }
+    </style>
   </head>
 
   <body>
-
     <!-- <<<<<<<<<<<<<<<<<<<<<<<<<< Section 1 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
     <div
-      class="relative bg-cover bg-bottom h-[60vh] w-full mb-16"
+      class="relative bg-cover bg-bottom h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[60vh] w-full mb-16"
       style="background-image: url('assets/image/img_3.jfif')"
     >
       <!-- Overlay to control opacity of the image -->
@@ -49,60 +57,44 @@
       </div>
     </div>
 
-        <!-- <<<<<<<<<<<<<<<<<<<<<<<<<< Section 2 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+    <!-- <<<<<<<<<<<<<<<<<<<<<<<<<< Section 2 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
 
-    <div class="container mx-auto mb-32">
-      <div class="grid grid-cols-12 gap-4">
-        <!-- Empty column for spacing (hidden on small screens) -->
-        <div class="hidden sm:block md:col-span-1"></div>
+    <div class="max-w-[1240px] mx-auto">
 
-        <!-- Image container -->
-        <div class="col-span-12 md:col-span-10 relative">
-          <!-- Company Profile Image -->
-          <img
-            src="assets/image/choose_us_img1.jfif"
-            alt="Company Profile Image"
-            class="w-full h-auto sm:h-64 md:h-80 lg:h-96 object-cover object-bottom"
-          />
 
-          <!-- Text Overlay (centered) -->
-          <div
-            class="absolute inset-0 flex items-start justify-end h-full mt-12 mr-12"
+      <div
+        class="w-auto h-[30vh]  sm:h-[30vh] md:h-[40vh] lg:h-[60vh] bg-bottom bg-cover bg-no-repeat"
+        style="background-image: url('assets/image/choose_us_img1.jfif')"
+      >
+        <!-- Content goes here -->
+        <div class="flex justify-end items-start h-full">
+          <h2
+            class="text-white font-bold sm:text-[44px] sm:leading-[36.5px] md:text-[36px] md:leading-[56.5px] lg:text-[48px] lg:leading-[68.5px] xl:text-[38px] xl:leading-[56px] uppercase bg-[#2B7AA5BF] bg-opacity-75 px-4 py-2 sm:w-[30vh] md:w-[50vh] lg:w-[60vh] xl:w-[70vh] mt-6 mr-6"
           >
-            <div class="bg-[#3e8db8] bg-opacity-60 p-4 w-full sm:w-2/4">
-              <h1
-                class="text-[#FFFFFF] font-inter font-bold text-left lg:text-[45px] md:text-[30px] sm:text-[25px] text-[20px] lg:leading-[53.45px] md:leading-[40.45px] sm:leading-[30.45px] leading-[24px]"
-              >
-                BUILDING THE FUTURE OF YOUR BUSINESS
-              </h1>
-            </div>
-          </div>
+            Building the Future of Your Business
+          </h2>
         </div>
-
-        <!-- Empty column for spacing (hidden on small screens) -->
-        <div class="hidden sm:block md:col-span-1"></div>
       </div>
+
     </div>
-    <!-- <<<<<<<<<<<<<<<<<<<<<<<<<< Section 3 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-    <div class="container mx-auto mb-32 p-2">
-      <div class="grid grid-cols-12 gap-4">
-        <!-- Empty column for spacing (hidden on small screens) -->
-        <div class="hidden md:block col-span-1"></div>
+
+    <!-- <<<<<<<<<<<<<<<<<<<<<<<<<<    Section 3    >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+    <div class="container mx-auto max-w-full md:max-w-[1240px] lg:max-w-[1240px] mb-32 mt-5 ">
+      <div class="grid grid-cols-12 gap-10">
 
         <!-- Text container -->
-        <div class="col-span-12 md:col-span-6">
+        <div class="col-span-12 md:col-span-8 ">
+
           <div>
-            <p
-              class="text-center sm:text-left font-inter text-[16px] md:text-[18px] lg:text-[18px] font-normal leading-[16px] md:leading-[20px] lg:leading-[24px]"
-            >
+            <p class="ptag text-justify text-sm md:text-base lg:text-base">
               We consider ourselves a dynamic broker agency. Our mission is to
               create operational excellence and value for our clients through
-              critical sales and innovative marketing execution. As your outside
-              sales agency, it is our mission to leverage our proven expertise,
-              integrity, and resources to create unparalleled value for your
-              brand. We pride ourselves on a history of successes utilizing
-              innovative omni-channel marketing strategies to get the most out
-              of a collaborative effort.
+              critical sales and innovative marketing execution.<br />
+              As your outside sales agency, it is our mission to leverage our
+              proven expertise, integrity, and resources to create unparalleled
+              value for your brand. We pride ourselves on a history of successes
+              utilizing innovative omni-channel marketing strategies to get the
+              most out of a collaborative effort.
             </p>
           </div>
 
@@ -119,10 +111,11 @@
                 <ul class="">
                   <li class="flex items-center">
                     <div>
-                      <input
-                      type="checkbox"
-                      class="w-3 h-3 sm:w-2 sm:h-2 md:w-4 md:h-4 lg:w-3 lg:h-3 xl:w-4 xl:h-3 accent-blue-500 rounded-full"
-                    />
+                      <img
+                        class="w-3 h-3 sm:w-2 sm:h-2 md:w-[1rem] md:h-[1rem] object-contain lg:w-5 lg:h-5 xl:w-4 xl:h-4"
+                        src="assets/image/Vector_1.png"
+                        alt=""
+                      />
                     </div>
                     <p
                       class="ml-5 font-inter text-[13px] sm:text-[12px] md:text-[14px] lg:text-[16px] font-medium leading-[18px] md:leading-[20px] lg:leading-[32px] tracking-[0.01em] text-left"
@@ -134,10 +127,11 @@
                   <!-- Repeat other items -->
                   <li class="flex items-center">
                     <div>
-                      <input
-                      type="checkbox"
-                      class="w-3 h-3 sm:w-2 sm:h-2 md:w-4 md:h-4 lg:w-3 lg:h-3 xl:w-4 xl:h-3 accent-blue-500 rounded-full"
-                    />
+                      <img
+                        class="w-3 h-3 sm:w-2 sm:h-2 md:w-[1rem] md:h-[1rem] object-contain lg:w-5 lg:h-5 xl:w-4 xl:h-4"
+                        src="assets/image/Vector_1.png"
+                        alt=""
+                      />
                     </div>
                     <p
                       class="ml-5 font-inter text-[13px] sm:text-[12px] md:text-[14px] lg:text-[16px] font-medium leading-[18px] md:leading-[20px] lg:leading-[32px] tracking-[0.01em] text-left"
@@ -148,10 +142,11 @@
 
                   <li class="flex items-center">
                     <div>
-                      <input
-                      type="checkbox"
-                      class="w-3 h-3 sm:w-2 sm:h-2 md:w-4 md:h-4 lg:w-3 lg:h-3 xl:w-4 xl:h-3 accent-blue-500 rounded-full"
-                    />
+                      <img
+                        class="w-3 h-3 sm:w-2 sm:h-2 md:w-[1rem] md:h-[1rem] object-contain lg:w-5 lg:h-5 xl:w-4 xl:h-4"
+                        src="assets/image/Vector_1.png"
+                        alt=""
+                      />
                     </div>
                     <p
                       class="ml-5 font-inter text-[13px] sm:text-[12px] md:text-[14px] lg:text-[16px] font-medium leading-[18px] md:leading-[20px] lg:leading-[32px] tracking-[0.01em] text-left"
@@ -162,10 +157,11 @@
 
                   <li class="flex items-center">
                     <div>
-                      <input
-                      type="checkbox"
-                      class="w-3 h-3 sm:w-2 sm:h-2 md:w-4 md:h-4 lg:w-3 lg:h-3 xl:w-4 xl:h-3 accent-blue-500 rounded-full"
-                    />
+                      <img
+                        class="w-3 h-3 sm:w-2 sm:h-2 md:w-[1rem] md:h-[1rem] object-contain lg:w-5 lg:h-5 xl:w-4 xl:h-4"
+                        src="assets/image/Vector_1.png"
+                        alt=""
+                      />
                     </div>
                     <p
                       class="ml-5 font-inter text-[13px] sm:text-[12px] md:text-[14px] lg:text-[16px] font-medium leading-[18px] md:leading-[20px] lg:leading-[32px] tracking-[0.01em] text-left"
@@ -176,10 +172,11 @@
 
                   <li class="flex items-center">
                     <div>
-                      <input
-                      type="checkbox"
-                      class="w-3 h-3 sm:w-2 sm:h-2 md:w-4 md:h-4 lg:w-3 lg:h-3 xl:w-4 xl:h-3 accent-blue-500 rounded-full"
-                    />
+                      <img
+                        class="w-3 h-3 sm:w-2 sm:h-2 md:w-[1rem] md:h-[1rem] object-contain lg:w-5 lg:h-5 xl:w-4 xl:h-4"
+                        src="assets/image/Vector_1.png"
+                        alt=""
+                      />
                     </div>
                     <p
                       class="ml-5 font-inter text-[13px] sm:text-[12px] md:text-[14px] lg:text-[16px] font-medium leading-[18px] md:leading-[20px] lg:leading-[32px] tracking-[0.01em] text-left"
@@ -190,10 +187,11 @@
 
                   <li class="flex items-center">
                     <div>
-                      <input
-                      type="checkbox"
-                      class="w-3 h-3 sm:w-2 sm:h-2 md:w-4 md:h-4 lg:w-3 lg:h-3 xl:w-4 xl:h-3 accent-blue-500 rounded-full"
-                    />
+                      <img
+                        class="w-3 h-3 sm:w-2 sm:h-2 md:w-[1rem] md:h-[1rem] object-contain lg:w-5 lg:h-5 xl:w-4 xl:h-4"
+                        src="assets/image/Vector_1.png"
+                        alt=""
+                      />
                     </div>
                     <p
                       class="ml-5 font-inter text-[13px] sm:text-[12px] md:text-[14px] lg:text-[16px] font-medium leading-[18px] md:leading-[20px] lg:leading-[32px] tracking-[0.01em] text-left"
@@ -211,10 +209,11 @@
                 <ul class="">
                   <li class="flex items-center">
                     <div>
-                      <input
-                      type="checkbox"
-                      class="w-3 h-3 sm:w-2 sm:h-2 md:w-4 md:h-4 lg:w-3 lg:h-3 xl:w-4 xl:h-3 accent-blue-500 rounded-full"
-                    />
+                      <img
+                        class="w-3 h-3 sm:w-2 sm:h-2 md:w-[1rem] md:h-[1rem] object-contain lg:w-5 lg:h-5 xl:w-4 xl:h-4"
+                        src="assets/image/Vector_1.png"
+                        alt=""
+                      />
                     </div>
                     <p
                       class="ml-5 font-inter text-[13px] sm:text-[12px] md:text-[14px] lg:text-[16px] font-medium leading-[18px] md:leading-[20px] lg:leading-[32px] tracking-[0.01em] text-left"
@@ -225,10 +224,11 @@
 
                   <li class="flex items-center">
                     <div>
-                      <input
-                      type="checkbox"
-                      class="w-3 h-3 sm:w-2 sm:h-2 md:w-4 md:h-4 lg:w-3 lg:h-3 xl:w-4 xl:h-3 accent-blue-500 rounded-full"
-                    />
+                      <img
+                        class="w-3 h-3 sm:w-2 sm:h-2 md:w-[1rem] md:h-[1rem] object-contain lg:w-5 lg:h-5 xl:w-4 xl:h-4"
+                        src="assets/image/Vector_1.png"
+                        alt=""
+                      />
                     </div>
                     <p
                       class="ml-5 font-inter text-[13px] sm:text-[12px] md:text-[14px] lg:text-[16px] font-medium leading-[18px] md:leading-[20px] lg:leading-[32px] tracking-[0.01em] text-left"
@@ -239,10 +239,11 @@
 
                   <li class="flex items-center">
                     <div>
-                      <input
-                      type="checkbox"
-                      class="w-3 h-3 sm:w-2 sm:h-2 md:w-4 md:h-4 lg:w-3 lg:h-3 xl:w-4 xl:h-3 accent-blue-500 rounded-full"
-                    />
+                      <img
+                        class="w-3 h-3 sm:w-2 sm:h-2 md:w-[1rem] md:h-[1rem] object-contain lg:w-5 lg:h-5 xl:w-4 xl:h-4"
+                        src="assets/image/Vector_1.png"
+                        alt=""
+                      />
                     </div>
                     <p
                       class="ml-5 font-inter text-[13px] sm:text-[12px] md:text-[14px] lg:text-[16px] font-medium leading-[18px] md:leading-[20px] lg:leading-[32px] tracking-[0.01em] text-left"
@@ -253,10 +254,11 @@
 
                   <li class="flex items-center">
                     <div>
-                      <input
-                      type="checkbox"
-                      class="w-3 h-3 sm:w-2 sm:h-2 md:w-4 md:h-4 lg:w-3 lg:h-3 xl:w-4 xl:h-3 accent-blue-500 rounded-full"
-                    />
+                      <img
+                        class="w-3 h-3 sm:w-2 sm:h-2 md:w-[1rem] md:h-[1rem] object-contain lg:w-5 lg:h-5 xl:w-4 xl:h-4"
+                        src="assets/image/Vector_1.png"
+                        alt=""
+                      />
                     </div>
                     <p
                       class="ml-5 font-inter text-[13px] sm:text-[12px] md:text-[14px] lg:text-[16px] font-medium leading-[18px] md:leading-[20px] lg:leading-[32px] tracking-[0.01em] text-left"
@@ -267,10 +269,11 @@
 
                   <li class="flex items-center">
                     <div>
-                      <input
-                      type="checkbox"
-                      class="w-3 h-3 sm:w-2 sm:h-2 md:w-4 md:h-4 lg:w-3 lg:h-3 xl:w-4 xl:h-3 accent-blue-500 rounded-full"
-                    />
+                      <img
+                        class="w-3 h-3 sm:w-2 sm:h-2 md:w-[1rem] md:h-[1rem] object-contain lg:w-5 lg:h-5 xl:w-4 xl:h-4"
+                        src="assets/image/Vector_1.png"
+                        alt=""
+                      />
                     </div>
                     <p
                       class="ml-5 font-inter text-[13px] sm:text-[12px] md:text-[14px] lg:text-[16px] font-medium leading-[18px] md:leading-[20px] lg:leading-[32px] tracking-[0.01em] text-left"
@@ -281,10 +284,11 @@
 
                   <li class="flex items-center">
                     <div>
-                      <input
-                      type="checkbox"
-                      class="w-3 h-3 sm:w-2 sm:h-2 md:w-4 md:h-4 lg:w-3 lg:h-3 xl:w-4 xl:h-3 accent-blue-500 rounded-full"
-                    />
+                      <img
+                        class="w-3 h-3 sm:w-2 sm:h-2 md:w-[1rem] md:h-[1rem] object-contain lg:w-5 lg:h-5 xl:w-4 xl:h-4"
+                        src="assets/image/Vector_1.png"
+                        alt=""
+                      />
                     </div>
                     <p
                       class="ml-5 font-inter text-[13px] sm:text-[12px] md:text-[14px] lg:text-[16px] font-medium leading-[18px] md:leading-[20px] lg:leading-[32px] tracking-[0.01em] text-left"
@@ -298,11 +302,11 @@
           </div>
 
           <div>
-            <h1 class="text-2xl font-bold mt-8 text-center sm:text-left mt-5">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-8 text-center sm:text-left">
               KEY INSIGHTS
             </h1>
             <p
-              class="sm:p-5 md:p-0 lg:p-0 xl:p-0 2xl:p-0 mt-5 text-center sm:text-left font-inter text-[16px] md:text-[18px] lg:text-[18px] font-normal leading-[16px] md:leading-[20px] lg:leading-[24px]"
+              class="text-sm sm:text-base md:text-lg lg:text-xl text-justify mt-3"
             >
               We pride ourselves on a history of successes utilizing innovative
               omni-channel marketing strategies to get the most out of a
@@ -323,68 +327,93 @@
             class="w-full h-full object-cover object-bottom"
           />
         </div>
-        <!-- Empty column for spacing -->
-        <div class="hidden md:block col-span-1"></div>
       </div>
     </div>
     <!-- <<<<<<<<<<<<<<<<<<<<<<<<<< Section 4 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+    
     <div class="flex flex-col items-center justify-center w-full h-[400px] bg-[#1F1F1F] mb-20">
       <div class="flex items-center">
         <div id="">
           <img src="assets/image/Vector1.png" alt="" class="w-3 h-3 ml-4" />
         </div>
-        <div class="ml-4 font-inter text-xs sm:text-sm md:text-base lg:text-lg font-medium leading-tight tracking-[2px] text-left text-[#DAD4D4BF] uppercase">
+        <div
+          class="ml-4 font-inter text-xs sm:text-sm md:text-base lg:text-lg font-medium leading-tight tracking-[2px] text-left text-[#DAD4D4BF] uppercase"
+        >
           <p>We work with companies around the world</p>
         </div>
       </div>
-      
-    
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-8 gap-4 mt-5">
-        <div class="hidden lg:block col-span-1">
-     
-        </div>
-    
-        <!-- Column 2: Takes up 1 column -->
-        <div class="col-span-1 p-4">
-          <img src="assets/image/Link → ab6-2.webp.png" alt="" class="w-full h-auto" />
-        </div>
-        <!-- Column 3: Takes up 1 column -->
-        <div class="col-span-1 p-4">
-          <img src="assets/image/Group - 2/Link → ab7-2.webp.png" alt="" class="w-full h-auto" />
-        </div>
-        <!-- Column 4: Takes up 1 column -->
-        <div class="col-span-1 p-4">
-          <img src="assets/image/Group - 3/Link → ab8-2.webp.png" alt="" class="w-full h-auto" />
-        </div>
-        <!-- Column 5: Takes up 1 column -->
-        <div class="col-span-1 p-4">
-          <img src="assets/image/Group - 4/Link → ab9-2.webp.png" alt="" class="w-full h-auto" />
-        </div>
-        <!-- Column 6: Takes up 1 column -->
-        <div class="col-span-1 p-4">
-          <img src="assets/image/Group - 5/Link → ab10-2.webp.png" alt="" class="w-full h-auto" />
-        </div>
-        <!-- Column 7: Takes up 1 column -->
-        <div class="col-span-1 p-4">
-          <img src="assets/image/Group - 6/Link → ab11-2.webp.png" alt="" class="w-full h-auto" />
-        </div>
-    
-        <div class="hidden md:block col-span-1">
-         
+
+      <div class="container mx-auto max-w-[1240px] ">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mt-5">
+          <!-- <div class="hidden lg:block col-span-1"></div> -->
+  
+          <!-- Column 2: Takes up 1 column -->
+          <div class=" p-4">
+            <img
+              src="assets/image/Link → ab6-2.webp.png"
+              alt=""
+              class="w-full h-auto"
+            />
+          </div>
+          <!-- Column 3: Takes up 1 column -->
+          <div class=" p-4">
+            <img
+              src="assets/image/Group - 2/Link → ab7-2.webp.png"
+              alt=""
+              class="w-full h-auto"
+            />
+          </div>
+          <!-- Column 4: Takes up 1 column -->
+          <div class=" p-4">
+            <img
+              src="assets/image/Group - 3/Link → ab8-2.webp.png"
+              alt=""
+              class="w-full h-auto"
+            />
+          </div>
+          <!-- Column 5: Takes up 1 column -->
+          <div class=" p-4">
+            <img
+              src="assets/image/Group - 4/Link → ab9-2.webp.png"
+              alt=""
+              class="w-full h-auto"
+            />
+          </div>
+          <!-- Column 6: Takes up 1 column -->
+          <div class=" p-4">
+            <img
+              src="assets/image/Group - 5/Link → ab10-2.webp.png"
+              alt=""
+              class="w-full h-auto"
+            />
+          </div>
+          <!-- Column 7: Takes up 1 column -->
+          <div class=" p-4">
+            <img
+              src="assets/image/Group - 6/Link → ab11-2.webp.png"
+              alt=""
+              class="w-full h-auto"
+            />
+          </div>
+  
+          <!-- <div class="hidden md:block col-span-1"></div> -->
         </div>
       </div>
-    </div>
-    
 
+      
+    </div>
 
-  <div class="flex items-center lg:ml-32 md:ml-20 sm:ml-10 mb-10">
-    <div id="">
-      <img src="assets/image/Vector1.png" alt="" class="w-3 h-3 ml-4" />
+    <div class="flex items-center max-w-[1240px] mx-auto">
+      <div id="">
+        <img src="assets/image/Vector1.png" alt="" class="w-3 h-3" />
+      </div>
+      <div
+        class="ml-4 font-inter text-base font-medium leading-4 tracking-wider text-left uppercase"
+      >
+        <p>more on why choose us</p>
+      </div>
     </div>
-    <div class=" ml-4 font-inter text-base font-medium leading-4 tracking-wider text-left uppercase">
-      <p>more on why choose us</p>
-    </div>
-  </div>
 
     <!-- <<<<<<<<<<<<<<<<<<<<<<<<<< Section 5 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
     <div class="container mx-auto">
@@ -402,115 +431,139 @@
       </div>
     </div>
 
-
     <!-- <<<<<<<<<<<<<<<<<<<<<<<<<< Section 6 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
     <div class="ml-3 mr-3">
       <div class="container mx-auto">
-
         <div class="grid grid-cols-1 md:grid-cols-12 gap-4 pb-16 md:pb-32 py-6">
           <!-- Empty space for larger screens -->
           <div class="hidden md:block col-span-3"></div>
-    
+
           <!-- Main content -->
           <div class="col-span-1 md:col-span-8">
             <!-- Section 1: Worldwide Reach -->
-            <details class="mb-5">
+            <details class="mb-5 border-b border-gray-300 ">
               <summary class="flex justify-between items-center cursor-pointer">
-                <p class="font-inter uppercase sm:text-[24px] md:text-[24px]  lg:text-[26px] font-semibold leading-tight text-left text-[#040202]">
+                <p
+                  class=" mb-4 font-inter uppercase text-[17px] md:text-[20px] lg:text-[22px] font-semibold leading-tight text-left text-[#040202]"
+                >
                   Category Coverage
                 </p>
                 <img
-                  src="assets/image/teenyicons_up-outline.png"
+                  src="assets/image/Vector.png"
                   alt="Arrow Icon"
-                  class="w-8 h-8 md:w-10 md:h-10 transform transition-transform duration-300 rotate-0 accordion-icon"
+                  class="w-6 h-4 md:w-[1.8rem] md:h-[1.2rem]  transform transition-transform duration-400 rotate-0 accordion-icon"
                 />
               </summary>
               <div class="grid grid-cols-12 gap-4 mt-4">
-                <div class="col-span-9">
+                <div class="col-span-12">
                   <div class="mb-4">
-                    <p class="font-inter font-normal text-base leading-6 text-black">
-                      Fred O’Kasick Sales possesses a successful track record at executing all the factors that influence the categories we serve and manage.
-                    
+                    <p
+                      class="font-inter font-normal text-base leading-6 text-black"
+                    >
+                      Fred O’Kasick Sales possesses a successful track record at
+                      executing all the factors that influence the categories we
+                      serve and manage.
                     </p>
                   </div>
 
                   <div>
                     <ul class="text-left list-disc mb-4">
-                      <li class="ml-4">Planogram Strategic Development and Execution</li>
+                      <li class="ml-4">
+                        Planogram Strategic Development and Execution
+                      </li>
                       <li class="ml-4">Data Analysis Reporting</li>
                       <li class="ml-4">Market Segmentation and Research</li>
-                      <li class="ml-4">Merchandising and Promotional Excellence</li>
+                      <li class="ml-4">
+                        Merchandising and Promotional Excellence
+                      </li>
                       <li class="ml-4">Trend Analysis</li>
                     </ul>
                   </div>
-                  <p class="font-inter font-normal text-base leading-6 text-black mb-5">
-                    We are trusted thought leaders who create actionable insights from data (IRI, ShopperInsights.Com, Nielsen, IRI, NPD, ECRM). Fred O’Kasick Sales possesses a successful track record at executing all the factors that influence the categories we serve and manage
+                  <p
+                    class="font-inter font-normal text-base leading-6 text-black mb-5"
+                  >
+                    We are trusted thought leaders who create actionable
+                    insights from data (IRI, ShopperInsights.Com, Nielsen, IRI,
+                    NPD, ECRM). Fred O’Kasick Sales possesses a successful track
+                    record at executing all the factors that influence the
+                    categories we serve and manage
                   </p>
                 </div>
-                <div class="hidden md:block col-span-2"></div>
+                <!-- <div class="hidden md:block col-span-2"></div> -->
               </div>
-              
-              <hr class="border-t border-gray-300 my-4" />
+
+              <!-- <hr class="border-t border-gray-300 my-4" /> -->
             </details>
-    
+
             <!-- Section 2: A Peek into Our Files -->
-            <details class="mb-5">
+            <details class="mb-5 border-b border-gray-300">
               <summary class="flex justify-between items-center cursor-pointer">
-                <p class="font-inter uppercase sm:text-[24px] md:text-[24px]  lg:text-[26px] font-semibold leading-tight text-left text-[#040202]">
+                <p
+                  class="pb-5 font-inter uppercase text-[17px] md:text-[20px] lg:text-[22px] font-semibold leading-tight text-left text-[#040202]"
+                >
                   Making You Profitable
                 </p>
                 <img
                   src="assets/image/Vector.png"
                   alt="Arrow Icon"
-                  class="w-7 h-6 md:w-9 md:h-7 transform transition-transform duration-300 rotate-0 accordion-icon"
+                  class="w-6 h-4 md:w-[1.8rem] md:h-[1.2rem]  transform transition-transform duration-400 rotate-0 accordion-icon"
                 />
               </summary>
-              <p class="font-inter font-normal text-base leading-6 text-black mb-5">
-                We have deep knowledge across sectors and maintain extensive files of case studies, reports, and internal analysis that showcase how our agency has helped clients drive success across the globe.
+              <p
+                class="font-inter font-normal text-base leading-6 text-black mb-5"
+              >
+                We have deep knowledge across sectors and maintain extensive
+                files of case studies, reports, and internal analysis that
+                showcase how our agency has helped clients drive success across
+                the globe.
               </p>
-              <hr class="border-t border-gray-300 my-4" />
+              <!-- <hr class="border-t border-gray-300 my-4" /> -->
             </details>
-    
+
             <!-- Section 3: 30 Years -->
             <details class="mb-5">
               <summary class="flex justify-between items-center cursor-pointer">
-                <p class="font-inter uppercase sm:text-[24px] md:text-[24px]  lg:text-[26px] font-semibold leading-tight text-left text-[#040202]">
+                <p
+                  class="font-inter uppercase text-[17px] md:text-[20px] lg:text-[22px] font-semibold leading-tight text-left text-[#040202]"
+                >
                   Knowing the Retail Trade
                 </p>
                 <img
                   src="assets/image/Vector.png"
                   alt="Arrow Icon"
-                  class="w-7 h-6 md:w-9 md:h-7 transform transition-transform duration-300 rotate-0 accordion-icon"
+                  class="w-6 h-4 md:w-[1.8rem] md:h-[1.2rem]  transform transition-transform duration-300 rotate-0 accordion-icon"
                 />
               </summary>
-              <p class="font-inter font-normal text-[16px]   leading-6 text-black mb-5">
-                With over 30 years of experience, our agency has helped countless brands scale and expand into new markets while consistently delivering impressive results.
+              <p
+                class="font-inter font-normal text-[16px] leading-6 text-black mb-5"
+              >
+                With over 30 years of experience, our agency has helped
+                countless brands scale and expand into new markets while
+                consistently delivering impressive results.
               </p>
             </details>
           </div>
-    
+
           <!-- Empty space for larger screens -->
           <div class="hidden md:block col-span-1"></div>
         </div>
       </div>
     </div>
-    
+
     <!-- JavaScript to handle accordion toggle -->
     <script>
-      document.querySelectorAll('details').forEach((detail) => {
-        detail.addEventListener('toggle', () => {
-          const icon = detail.querySelector('.accordion-icon');
+      document.querySelectorAll("details").forEach((detail) => {
+        detail.addEventListener("toggle", () => {
+          const icon = detail.querySelector(".accordion-icon");
           if (detail.open) {
-            icon.classList.remove('rotate-0');
-            icon.classList.add('rotate-180'); // Rotate icon when open
+            icon.classList.remove("rotate-0");
+            icon.classList.add("rotate-180"); // Rotate icon when open
           } else {
-            icon.classList.remove('rotate-180');
-            icon.classList.add('rotate-0'); // Reset icon rotation when closed
+            icon.classList.remove("rotate-180");
+            icon.classList.add("rotate-0"); // Reset icon rotation when closed
           }
         });
       });
     </script>
-    
-
   </body>
 </html>

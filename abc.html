@@ -14,7 +14,7 @@
     rel="stylesheet"
   />
 
-  <!-- <style>
+  <style>
     .accordion-icon {
   transition: transform 0.3s ease; /* Smooth transition */
 }
@@ -25,7 +25,14 @@
 
 .rotate-180 {
   transform: rotate(180deg);
-} -->
+}
+
+.centetdiv{
+    width: 82%;
+    margin: auto;
+    padding: 0px 0px;
+}
+
   </style>
 </head>
 <body>
@@ -292,6 +299,47 @@ Worldwide Reach
 />
 
 
+
+
+
+
+
+
+
+
+
+<div class="container mx-auto mb-32">
+  <div class="grid grid-cols-12 gap-4">
+    <!-- Empty column for spacing (hidden on small screens) -->
+    <div class="hidden sm:block md:col-span-1"></div>
+
+    <!-- Image container -->
+    <div class="col-span-12 md:col-span-10 relative">
+      <!-- Company Profile Image -->
+      <img
+        src="assets/image/choose_us_img1.jfif"
+        alt="Company Profile Image"
+        class="w-full h-auto sm:h-64 md:h-80 lg:h-96 object-cover object-bottom"
+      />
+
+      <!-- Text Overlay (centered) -->
+      <div
+        class="absolute inset-0 flex items-start justify-end h-full mt-12 mr-12"
+      >
+        <div class="bg-[#3e8db8] bg-opacity-60 p-4 w-full sm:w-2/4">
+          <h1
+            class="text-[#FFFFFF] font-inter font-bold text-left lg:text-[45px] md:text-[30px] sm:text-[25px] text-[20px] lg:leading-[53.45px] md:leading-[40.45px] sm:leading-[30.45px] leading-[24px]"
+          >
+            BUILDING THE FUTURE OF YOUR BUSINESS
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- Empty column for spacing (hidden on small screens) -->
+    <div class="hidden sm:block md:col-span-1"></div>
+  </div>
+</div>
 <!-- JavaScript to handle accordion toggle -->
 <script>
   document.querySelectorAll('details').forEach((detail) => {
