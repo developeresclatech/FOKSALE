@@ -22,41 +22,39 @@
   <body>
     <!------------------------------ section 1------------------------ -->
     <div
-      class="flex justify-center relative bg-cover bg-bottom h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[60vh] w-full"
-      style="background-image: url('assets/image/imag_About.png')"
+    class="relative bg-cover bg-bottom h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[60vh] w-full"
+    style="background-image: url('assets/image/imag_About.png')"
+  >
+    <!-- Overlay with semi-transparent background color -->
+    <div class="absolute inset-0 bg-black/50"></div>
+  
+    <!-- Content over the image (text remains unaffected by opacity) -->
+    <div
+      class="container mx-auto max-w-[1240px flex justify-start items-center h-full px-5 relative z-10"
     >
-      <!-- Overlay to control opacity of the image -->
-      <div class="absolute inset-0 bg-black opacity-20"></div>
-
-      <div
-        class="container mx-auto flex justify-start items-center h-full px-5"
-      >
-        <!-- Content over the image (text remains unaffected by opacity) -->
-        <div>
-          <h1
-            class="uppercase text-white font-inter font-semibold text-[32px] sm:text-[40px] md:text-[48px] lg:text-[54px] leading-[40px] sm:leading-[50px] md:leading-[60px] lg:leading-[67.77px] about"
-          >
-            Contact us
-          </h1>
-          <h3
-            class="uppercase text-white font-inter font-normal leading-[24px] sm:leading-[29.05px] md:leading-[34px] lg:leading-[42px] sm:text-[14px] md:text-[18px] lg:text-[24px] about1"
-          >
-            <span class="text-[#4E9FF5]">HOME</span> /contact us
-          </h3>
-
-          <!-- Icon -->
-          <div class="mt-4">
-            <img
-              class="icon w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-16 lg:h-16"
-              src="assets/image/Frame87.png"
-              alt="Icon"
-            />
-          </div>
+      <div>
+        <h1
+          class="uppercase text-white font-inter font-semibold text-[32px] sm:text-[40px] md:text-[48px] lg:text-[54px] leading-[40px] sm:leading-[50px] md:leading-[60px] lg:leading-[67.77px] about"
+        >
+        Contact us
+        </h1>
+        <h3
+          class="uppercase text-white font-inter font-normal leading-[24px] sm:leading-[29.05px] md:leading-[34px] lg:leading-[42px] sm:text-[14px] md:text-[18px] lg:text-[24px] about1"
+        >
+        <span class="text-[#4E9FF5]">HOME</span> /contact us
+        </h3>
+  
+        <!-- Icon -->
+        <div class="mt-4">
+          <img
+            class="icon w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-16 lg:h-16"
+            src="assets/image/Frame87.png"
+            alt="Icon"
+          />
         </div>
       </div>
-
     </div>
-
+  </div>
     <!------------------------------- SECTION 2---------------------------- -->
     <div class="container mx-auto max-w-[1240px]  mt-16">
       <div
